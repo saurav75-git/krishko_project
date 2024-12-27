@@ -1,0 +1,279 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Popup Page</title>
+    <style>
+        /* पॉपअप के लिए स्टाइल */
+        .popup-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5);
+            display: none;
+        }
+
+        .popup-content {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 300px;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+            text-align: center;
+        }
+
+        .close-btn {
+            background-color: #e74c3c;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .close-btn:hover {
+            background-color: #c0392b;
+        }
+
+        .open-btn {
+            background-color: #3498db;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .open-btn:hover {
+            background-color: #2980b9;
+        }
+        .container{
+            width: 40%;
+            height: 30%;
+            border: 2px solid red;
+            align-items: center;
+        }
+    </style>
+</head>
+<body>
+ <div class="container">
+    
+    <h1>Popup Page Example</h1>
+
+    <!-- बटन जिसे क्लिक करने पर पॉपअप खुलेगा -->
+<!-- <button class="open-btn" onclick="openPopup()">पॉपअप खोलें</button>
+
+ </div> -->
+<!-- पॉपअप की संरचना -->
+<!-- <div class="popup-overlay" id="popup">
+        <div class="popup-content">
+           <h1>saurav</h1>
+           <img src="/krishkoImge/saurav_pic.png" alt="">
+        </div>
+    </div>
+
+    <script> -->
+<!-- // पॉपअप खोलने के लिए फंक्शन
+        function openPopup() {
+            document.getElementById('popup').style.display = 'block';
+        }
+
+        // पॉपअप बंद करने के लिए फंक्शन
+        function closePopup() {
+            document.getElementById('popup').style.display = 'none'; -->
+}
+<!-- </script>
+
+</body>
+
+</html> -->
+
+
+<!-- <!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hover Lift Effect</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f3f3f3;
+            font-family: Arial, sans-serif;
+        }
+
+        .box {
+            width: 150px;
+            height: 150px;
+            background-color: #4caf50;
+            border-radius: 10px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: #fff;
+            font-size: 24px;
+            font-weight: bold;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .box:hover {
+            /* transform: translateY(-10px) translatex(-10px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2); */
+            transform: scale(1.05);
+            transition: 0.2s ease-in-out;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box">Hover Me</div>
+</body>
+
+</html> -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Products Page</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 1200px;
+            margin: 20px auto;
+        }
+
+        .nav-bar {
+            display: flex;
+            background-color: #333;
+        }
+
+        .nav-bar button {
+            flex: 1;
+            padding: 15px;
+            background-color: #555;
+            color: white;
+            border: none;
+            cursor: pointer;
+            text-align: center;
+            transition: 0.3s;
+        }
+
+        .nav-bar button:hover {
+            background-color: #777;
+        }
+
+        .nav-bar button.active {
+            background-color: #2196F3;
+        }
+
+        .content {
+            margin-top: 20px;
+            padding: 20px;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            background-color: #f9f9f9;
+        }
+
+        .tab-content {
+            display: none;
+        }
+
+        .tab-content.active {
+            display: block;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <!-- Navigation Bar -->
+    <div class="nav-bar">
+        <button class="tab-button active" data-tab="all-products">All Products</button>
+        <button class="tab-button" data-tab="motor">Motor</button>
+        <button class="tab-button" data-tab="pumps">Pumps</button>
+        <button class="tab-button" data-tab="tank">Tank</button>
+        <button class="tab-button" data-tab="pipes">Pipes</button>
+    </div>
+
+    <!-- Content Area -->
+    <div class="content">
+        <div id="all-products" class="tab-content active">
+            <h2>All Products</h2>
+            <p>Here you will see all the products available in our store.</p>
+        </div>
+
+        <div id="motor" class="tab-content">
+            <h2>Motor</h2>
+            <p>Explore our range of high-performance motors.</p>
+        </div>
+
+        <div id="pumps" class="tab-content">
+            <h2>Pumps</h2>
+            <p>Check out our collection of water and industrial pumps.</p>
+        </div>
+
+        <div id="tank" class="tab-content">
+            <h2>Tank</h2>
+            <p>Find a variety of storage tanks to suit your needs.</p>
+        </div>
+
+        <div id="pipes" class="tab-content">
+            <h2>Pipes</h2>
+            <p>Discover our range of high-quality pipes for every purpose.</p>
+        </div>
+    </div>
+</div>
+
+<script>
+    const buttons = document.querySelectorAll('.tab-button');
+    const tabContents = document.querySelectorAll('.tab-content');
+
+    buttons.forEach(button => {
+        button.addEventListener('click', () => {
+            // Remove active class from all buttons
+            buttons.forEach(btn => btn.classList.remove('active'));
+            // Add active class to the clicked button
+            button.classList.add('active');
+
+            // Get the tab name from the data-tab attribute
+            const tabName = button.getAttribute('data-tab');
+
+            // Hide all tab contents
+            tabContents.forEach(content => content.classList.remove('active'));
+            // Show the corresponding tab content
+            document.getElementById(tabName).classList.add('active');
+        });
+    });
+</script>
+
+</body>
+</html>

@@ -1,0 +1,753 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <title>KRISHKO-home</title>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+  <meta content="" name="keywords" />
+  <meta content="" name="description" />
+  <!-- Favicon -->
+  <link href="/krishkoImge/krishco-logo-bg.jpg" rel="icon" />
+
+  <!-- Google Web Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500&family=Quicksand:wght@600;700&display=swap"
+    rel="stylesheet" />
+
+  <!-- Icon Font Stylesheet -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet" />
+
+  <!-- Libraries Stylesheet -->
+  <link href="lib/animate/animate.min.css" rel="stylesheet" />
+  <link href="lib/lightbox/css/lightbox.min.css" rel="stylesheet" />
+  <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet" />
+
+  <!-- Customized Bootstrap Stylesheet -->
+  <link href="css/bootstrap.min.css" rel="stylesheet" />
+
+  <!-- Template Stylesheet -->
+  <link href="css/style.css" rel="stylesheet" />
+  <!-- fontawasme cdn -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css"
+    integrity="sha512-5Hs3dF2AEPkpNAR7UiOHba+lRSJNeM2ECkwxUIxC1Q/FLycGTbNapWXB4tP889k5T5Ju8fs4b1P5z/iB4nMfSQ=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <!-- <link type="text/css" rel="stylesheet" href="https://odoocdn.com/web/assets/1/e7260d0/web.assets_frontend.min.css"/> -->
+  <link rel="stylesheet"
+    href="https://fonts.googleapis.com/css?family=Sofia&effect=neon|outline|emboss|shadow-multiple">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&display=swap" rel="stylesheet">
+</head>
+<style>
+  /* *{
+    border: 1px solid red;
+  } */
+  input {
+    width: 100%;
+    border: 1px solid skyblue;
+    border-radius: 5px;
+    padding: 10px;
+    background-color: rgb(250, 250, 250);
+    color: white;
+
+  }
+
+  textarea {
+    width: 100%;
+    border: 1px solid skyblue;
+    border-radius: 5px;
+    padding: 10px;
+  }
+
+  #button {
+    position: relative;
+    left: 20%;
+    width: 20%;
+    height: 10%;
+    border: none;
+    border-radius: 5px;
+    margin: 20px;
+    color: white;
+  }
+
+  .box-shadow {
+    box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.5);
+  }
+
+  /* .br{
+    border: 10px solid  green;
+  } */
+  .animal-item:hover {
+    transform: scale(1.05);
+    transition: 0.2s ease-in-out;
+    /* box-shadow: 4px 4px 10px rgb(0, 0, 0, 0.5); */
+  }
+
+ .caveat-uniquifier{
+  font-family: Caveat;
+  font-optical-sizing: auto;
+  font-weight: weight;
+  font-style: normal;
+}
+</style>
+
+<body>
+  <!-- Spinner Start -->
+  <div id="spinner"
+    class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
+    <div class="spinner-border text-primary" style="width: 3rem; height: 3rem" role="status">
+      <span class="sr-only">Loading...</span>
+    </div>
+  </div>
+  <!-- Spinner End -->
+
+  <!-- Navbar Start -->
+  <nav class="navbar navbar-expand-lg bg-white navbar-light sticky-top py-lg-0 px-4 px-lg-5 box-shadow wow fadeIn "
+    custom-navbar-lg data-wow-delay="0.1s">
+    <a href="index.html" class="navbar-brand p-0">
+      <img class="img-fluid me-3" src="/krishkoImge/krishco-logo-bg.jpg" alt="Icon" />
+    </a>
+    <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class=" navbar-collapse py-4 py-lg-0 " id="navbarCollapse">
+      <div class="navbar-nav ms-auto br" style="font-size: 40px;">
+        <a href="index.html" class="nav-item nav-link active"><b><i class="fa-solid fa-house"></i></b></a>
+        <a href="product.html" class="nav-item nav-link"><b>product</b></a>
+        <a href="blog.html" class="nav-item nav-link"><b>Blog</b></a>
+        <div class="nav-item dropdown">
+          <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown"><b>Company</b></a>
+          <div class="dropdown-menu rounded-0 rounded-bottom m-0">
+            <a href="about.html" class="dropdown-item">About us</a>
+            <a href="gallery.html" class="dropdown-item">Our gallery</a>
+          </div>
+        </div>
+        <a href="contact.html" class="nav-item nav-link"><b>contact</b></a>
+      </div>
+      <a href="login.html" class="btn btn-primary"><i class="fa-solid fa-arrow-right-to-bracket"></i>&nbsp; LOGIN</a>
+    </div>
+  </nav>
+  <!-- Navbar End -->
+
+  <!-- Header Start -->
+  <div class="container-fluid bg-dark p-0 mb-8">
+    <div class="col-md-12 wow fadeIn" data-wow-delay="0.5s">
+      <!-- <button id="button">Search our product</button> -->
+      <div class="owl-carousel header-carousel">
+        <div class="owl-carousel-item">
+          <img class="img-fluid" src="/krishkoImge/website1.jpg" alt="" />
+        </div>
+        <div class="owl-carousel-item">
+          <img class="img-fluid" src="/krishkoImge/website2.jpg" alt="" />
+        </div>
+        <div class="owl-carousel-item">
+          <img class="img-fluid" src="/krishkoImge/website3.jpg" alt="" />
+        </div>
+        <div class="owl-carousel-item">
+          <img class="img-fluid" src="/krishkoImge/website4.jpg" alt="" />
+        </div>
+      </div>
+    </div>
+  </div>
+  </div>
+  <!-- Header End -->
+
+  <!-- Video Modal Start -->
+  <div class="modal modal-video fade" id="videoModal" tabindex="-1" aria-labelledby="exampleModalLabel"
+    aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content rounded-0">
+        <div class="modal-header">
+          <h3 class="modal-title" id="exampleModalLabel">Youtube Video</h3>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <!-- 16:9 aspect ratio -->
+          <div class="ratio ratio-16x9">
+            <iframe class="embed-responsive-item" src="" id="video" allowfullscreen allowscriptaccess="always"
+              allow="autoplay"></iframe>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- Video Modal End -->
+
+  <!-- our product -->
+  <div class="container-xxl py-5">
+    <div class="container">
+      <div class="row g-5 mb-5 align-items-end wow fadeInUp" data-wow-delay="0.1s">
+        <div class="col-lg-12">
+          <h1 class="display-5 mb-0 caveat-uniquifier" style="text-align: center;">
+            OUR<span class="text-primary"> PRODUCT</span>
+          </h1>
+        </div>
+      </div>
+      <!-- filtern button start -->
+      <div class="row g-4">
+        <div class="col-lg-4 text-start ">
+          <h2 class="caveat-uniquifier">Krishco <span class="text-primary"> PRODUCT</span></h2>
+        </div>
+        <div class="col-lg-8 text-end">
+          <ul class="nav nav-pills d-inline-flex text-center mb-5">
+            <li class="nav-item">
+              <a class="d-flex m-2 py-2 bg-primary rounded-pill active" data-bs-toggle="pill" href="#tab-1">
+                <span class="text-light" style="width: 130px;" id="all-products">All Products</span>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="d-flex py-2 m-2 bg-primary rounded-pill" data-bs-toggle="pill" href="#tab-2">
+                <span class="text-light" style="width: 130px;" id="pumps">PUMPS</span>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="d-flex m-2 py-2 bg-primary rounded-pill" data-bs-toggle="pill" href="#tab-3">
+                <span class="text-light" style="width: 130px;" id="motor">MOTOR</span>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="d-flex m-2 py-2 bg-primary rounded-pill" data-bs-toggle="pill" href="#tab-4">
+                <span class="text-light" style="width: 150px;" id="pipes-and-fittings">PIPES FITTINGS</span>
+              </a>
+            </li>
+            <!-- <li class="nav-item">
+              <a class="d-flex m-2 py-2 bg-light rounded-pill" data-bs-toggle="pill" href="#tab-5">
+                <span class="text-dark" style="width: 130px;">Meat</span>
+              </a>
+            </li> -->
+          </ul>
+        </div>
+      </div>
+      <!-- filtern button end -->
+      <div class="row g-4 all-products">
+        <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
+          <div class="row g-4">
+            <div class="col-12">
+              <a class="animal-item" href="submersible.html">
+                <div class="position-relative box-shadow" style="background-color: bisque;">
+                  <img class="img-fluid" src="/krishkoImge/sermisible.png" alt="" />
+                  <div class="animal-text p-4">
+                    <p class="text-white small text-uppercase mb-0 caveat-uniquifier">SERMISIBLE</p>
+                    <h5 class="text-white mb-0 caveat-uniquifier">PUPM</h5>
+                  </div>
+                </div>
+              </a>
+            </div>
+            <div class="col-12">
+              <a class="animal-item" href="swrpipes.html">
+                <div class="position-relative box-shadow" style="background-color: cadetblue;">
+                  <img class="img-fluid" src="/krishkoImge/swr.png" alt="" />
+                  <div class="animal-text p-4">
+                    <p class="text-white small text-uppercase mb-0 caveat-uniquifier">SWR PIPES AND</p>
+                    <h5 class="text-white mb-0 caveat-uniquifier">FITTINGS</h5>
+                  </div>
+                </div>
+              </a>
+            </div>
+            <div class="col-12">
+              <a class="animal-item" href="agripipes.html">
+                <div class="position-relative box-shadow" style="background-color: rgb(222, 154, 198);">
+                  <img class="img-fluid" src="/krishkoImge/agri-and-fitting.jpg" alt="" />
+                  <div class="animal-text p-4">
+                    <p class="text-white small text-uppercase mb-0 caveat-uniquifier">AGRI PIPES AND</p>
+                    <h5 class="text-white mb-0 caveat-uniquifier">FITTINGS</h5>
+                  </div>
+                </div>
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
+          <div class="row g-4">
+            <div class="col-12">
+              <a class="animal-item" href="cpvcpipes.html">
+                <div class="position-relative box-shadow" style="background-color: violet;">
+                  <img class="img-fluid" src="/krishkoImge/cpvc.png" alt="" />
+                  <div class="animal-text p-4">
+                    <p class="text-white small text-uppercase mb-0 caveat-uniquifier">CPVC PIPES AND</p>
+                    <h5 class="text-white mb-0 caveat-uniquifier">FITTING</h5>
+                  </div>
+                </div>
+              </a>
+            </div>
+            <div class="col-12">
+              <a class="animal-item" href="motor.html">
+                <div class="position-relative box-shadow" style="background-color: rgb(127, 255, 191);">
+                  <img class="img-fluid" src="/krishkoImge/introduction1.png" alt="" />
+                  <div class="animal-text p-4">
+                    <p class="text-white small text-uppercase mb-0 caveat-uniquifier">MOTOR</p>
+                  </div>
+                </div>
+              </a>
+            </div>
+            <div class="col-12">
+              <a class="animal-item" href="casingpipes.html">
+                <div class="position-relative box-shadow" style="background-color: rgb(244, 196, 188);">
+                  <img class="img-fluid" src="/krishkoImge/casing-pipes.png" alt="" />
+                  <div class="animal-text p-4">
+                    <p class="text-white small text-uppercase mb-0 caveat-uniquifier">CASING</p>
+                    <h5 class="text-white mb-0 caveat-uniquifier">PIPES</h5>
+                  </div>
+                </div>
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.5s">
+          <div class="row g-4">
+            <div class="col-12">
+              <a class="animal-item" href="columpipes.html">
+                <div class="position-relative box-shadow" style="background-color: cadetblue;">
+                  <img class="img-fluid" src="/krishkoImge/colum.png" alt="" />
+                  <div class="animal-text p-4">
+                    <p class="text-white small text-uppercase mb-0 caveat-uniquifier">COLUMN </p>
+                    <h5 class="text-white mb-0 caveat-uniquifier">PIPES</h5>
+                  </div>
+                </div>
+              </a>
+            </div>
+            <div class="col-12">
+              <a class="animal-item" href="residentalpumps.html">
+                <div class="position-relative box-shadow" style="background-color:rgb(249, 191, 154);">
+                  <img class="img-fluid" src="/krishkoImge/1hp.png" alt="" />
+                  <div class="animal-text p-4">
+                    <p class="text-white small text-uppercase mb-0 caveat-uniquifier">RESIDENTIAL</p>
+                    <h5 class="text-white mb-0 caveat-uniquifier">PUMPS</h5>
+                  </div>
+                </div>
+              </a>
+            </div>
+            <div class="col-12">
+              <a class="animal-item" href="pupmsagriccultural.html">
+                <div class="position-relative box-shadow" style="background-color: rgb(185, 165, 225);">
+                  <img class="img-fluid" src="/krishkoImge/2hp.png" alt="" />
+                  <div class="animal-text p-4">
+                    <p class="text-white small text-uppercase mb-0 caveat-uniquifier">AGRICULTURAL</p>
+                    <h5 class="text-white mb-0 caveat-uniquifier">PUMPS</h5>
+                  </div>
+                </div>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- our product -->
+
+
+  <!-- pumps Start -->
+  <div class="container-xxl py-5 product-pump"
+    style="  background-image: linear-gradient(rgb(240, 243, 241),rgb(176, 233, 200)); display: none;">
+    <div class="container">
+      <div class="row g-5 mb-8 align-items-end wow fadeInUp" id="tab-1" data-wow-delay="0.1s">
+        <div class="col-lg-12">
+          <h1 class="display-5 mb-0" style="text-align: center;">
+            <span class="text-primary caveat-uniquifier">PUMPS</span>
+          </h1>
+          <p>KRISHCO Regenerative Self Priming Pumpsets are made from top-grade castings, finest components and high
+            quality gun metal using state-of-the-art technology, to conform to the latest International Standards. Each
+            & every stage in the manufacturing process is closely monitored through stringent quality tests to ensure
+            impeccable standards, superior performance and unmatched durability.</p>
+        </div>
+      </div>
+      <div class="row g-4">
+        <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
+          <div class="col-12">
+            <a class="animal-item" href="selfplumbring.html">
+              <div class="position-relative box-shadow" style="background-color: rgb(223, 240, 230);">
+                <img class="img-fluid" src="/krishkoImge/agricultural.png" alt="" />
+                <div class="animal-text p-4">
+                  <p class="text-white small " style="text-align: center;"><button type="button"
+                      class="btn btn-outline-success">SEE MORE</button></p>
+                </div>
+              </div>
+            </a>
+            <h5 class="mt-3" style="text-align: center;">self priming pump</h5>
+          </div>
+        </div>
+        <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
+          <div class="col-12">
+            <a class="animal-item" href="pupmsagriccultural.html">
+              <div class="position-relative box-shadow" style="background-color:rgb(223, 240, 230);">
+                <img class="img-fluid" src="/krishkoImge/2hp.png" alt="" />
+                <div class="animal-text p-4">
+                  <p class="text-white small " style="text-align: center;">
+                    <button type="button" class="btn btn-outline-success" style="text-align: center;">SEE MORE</button>
+                  </p>
+                </div>
+              </div>
+            </a>
+            <h5 class="mt-3" style="text-align: center;">AGRICULTURAL PUMP</h5>
+          </div>
+        </div>
+        <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.5s">
+          <div class="col-12">
+            <a class="animal-item" href="submersible.html">
+              <div class="position-relative box-shadow" style="background-color: rgb(223, 240, 230); ">
+                <img class="img-fluid" src="/krishkoImge/sermisible.png" alt="" />
+                <div class="animal-text p-4">
+                  <p class="text-white small " style="text-align: center;"><button type="button"
+                      class="btn btn-outline-success" style="text-align: center;">SEE MORE</button></p>
+                </div>
+              </div>
+            </a>
+            <h5 class="mt-3 " style="text-align: center;">SUBMERSIBLE PUMP</h5>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- pumps End -->
+
+  <!-- motors Start -->
+  <div class="container-xxl py-5 product-motor"
+    style="background-image: linear-gradient(rgb(240, 243, 241),rgb(176, 233, 200)); display: none;">
+    <div class="container">
+      <div class="row g-5 mb-5 align-items-end wow fadeInUp" data-wow-delay="0.1s">
+        <div class="col-lg-12">
+          <h1 class="display-5 mb-0" style="text-align: center;">
+            <span class="text-primary caveat-uniquifier">MOTOR</span>
+          </h1>
+          <p>The Krischo Motor is an innovative and efficient electric motor designed to deliver high performance while
+            maintaining environmental sustainability. Known for its compact design and advanced technology, the Krischo
+            Motor offers exceptional energy efficiency, reduced carbon footprint, and reliable operation. With a focus
+            on precision engineering and cutting-edge materials, this motor is ideal for various applications, providing
+            a seamless blend of power and eco-friendly features. Experience the future of electric motors with Krischo,
+            where innovation meets sustainability for a greener tomorrow.</p>
+        </div>
+        <!-- <div class="col-lg-6 text-lg-end">
+        <a class="btn btn-primary py-3 px-5" href="">Special Pricing</a>
+      </div> -->
+      </div>
+      <div class="row g-4">
+        <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
+          <div class="col-12">
+            <a class="animal-item" href="">
+              <div class="position-relative box-shadow" style="background-color: rgb(223, 240, 230); ">
+                <img class="img-fluid" src="/krishkoImge/introduction1.png" alt="" />
+                <div class="animal-text p-4">
+                  <p class="text-white small " style="text-align: center;"><button type="button"
+                      class="btn btn-outline-success" style="text-align: center;">SEE MORE</button></p>
+                </div>
+              </div>
+            </a>
+            <h5 class="mt-3" style="text-align: center;">Single-Phase-motor</h5>
+          </div>
+        </div>
+        <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
+          <div class="col-12">
+            <a class="animal-item" href="">
+              <div class="position-relative box-shadow" style="background-color:rgb(223, 240, 230); ">
+                <img class="img-fluid" src="/krishkoImge/three-phase-moter.png" alt="" />
+                <div class="animal-text p-4">
+                  <p class="text-white small " style="text-align: center;"><button type="button"
+                      class="btn btn-outline-success" style="text-align: center;">SEE
+                      MORE</button>
+                  </p>
+                </div>
+              </div>
+            </a>
+            <h5 class="mt-3" style="text-align: center;">Three-Phase-motor</h5>
+          </div>
+        </div>
+        <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.5s">
+          <div class="col-12">
+            <a class="animal-item" href="motor.html">
+              <div class="position-relative box-shadow" style="background-color: rgb(223, 240, 230);">
+                <img class="img-fluid" src="/krishkoImge/self-prumering-pump.png" alt="" />
+                <div class="animal-text p-4">
+                  <p class="text-white small " style="text-align: center;"><button type="button"
+                      class="btn btn-outline-success" style="text-align: center;">SEE MORE</button></p>
+                </div>
+              </div>
+            </a>
+            <h5 class="mt-3" style="text-align: center;">motor</h5>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- motors End -->
+
+  <!-- PIPES AND FITTINGS Start -->
+  <div class="container-xxl py-5 product-pipes"
+    style="background-image: linear-gradient(rgb(240, 243, 241),rgb(176, 233, 200));display: none;">
+    <div class="container">
+      <div class="row g-5 mb-5 align-items-end wow fadeInUp" data-wow-delay="0.1s">
+        <div class="col-lg-12">
+          <h1 class="display-5 mb-0" style="text-align: center;">
+            <span class="text-primary caveat-uniquifier">PIPES AND FITTINGS</span>
+          </h1>
+          <p>Krischo Pipe and Fitting is a trusted provider of high-quality piping solutions for various industrial
+            applications. Specializing in the manufacturing and distribution of pipes and fittings, Krischo ensures
+            durability, efficiency, and reliability in every product. With a commitment to superior craftsmanship and
+            innovative design, Krischo offers a comprehensive range of pipes and fittings suitable for diverse
+            industries, including plumbing, construction, and manufacturing. Explore our catalog to discover top-notch
+            products that meet stringent quality standards, providing seamless integration into your projects. Choose
+            Krischo for robust, reliable, and cutting-edge piping solutions.</p>
+        </div>
+      </div>
+      <div class="row g-4">
+        <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
+          <div class="col-12">
+            <a class="animal-item" href="upvcpipes.html">
+              <div class="position-relative box-shadow" style="background-color: rgb(223, 240, 230);">
+                <img class="img-fluid" src="/krishkoImge/upvc.png" alt="" />
+                <div class="animal-text p-4">
+                  <p class="text-white small " style="text-align: center;"><button type="button"
+                      class="btn btn-outline-success" style="text-align: center;">SEE
+                      MORE</button>
+                  </p>
+                </div>
+              </div>
+            </a>
+            <h5 class="mt-3" style="text-align: center;">UPVC PIPE</h5>
+          </div>
+        </div>
+        <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
+          <div class="col-12">
+            <a class="animal-item" href="cpvcpipes.html">
+              <div class="position-relative box-shadow" style="background-color:rgb(223, 240, 230);">
+                <img class="img-fluid" src="/krishkoImge/cpvc.png" alt="" />
+                <div class="animal-text p-4">
+                  <p class="text-white small " style="text-align: center;"><button type="button"
+                      class="btn btn-outline-success" style="text-align: center;">SEE MORE</button></p>
+                </div>
+              </div>
+            </a>
+            <h5 class="mt-3" style="text-align: center;">CPVC PIPES</h5>
+          </div>
+        </div>
+        <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.5s">
+          <div class="col-12">
+            <a class="animal-item" href="swrpipes.html">
+              <div class="position-relative box-shadow" style="background-color: rgb(223, 240, 230);">
+                <img class="img-fluid" src="/krishkoImge/swr.png" alt="" />
+                <div class="animal-text p-4">
+                  <p class="text-white small " style="text-align: center;"><button type="button"
+                      class="btn btn-outline-success" style="text-align: center;">SEE MORE</button></p>
+                </div>
+              </div>
+            </a>
+            <h5 class="mt-3" style="text-align: center;">SWR PIPES</h5>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- PIPES AND FITTINGS End -->
+
+  <!-- our new product start -->
+
+
+
+  <!-- our new product end -->
+
+
+
+  <!-- Contact Start -->
+  <div class="container-xxl py-5">
+    <div class="container">
+      <div class="row g-5">
+        <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.1s">
+          <p><span class="text-primary me-2"></span></p>
+          <h1 class="display-5 mb-4 caveat-uniquifier"><span style="color: rgb(81, 80, 80);">Get</span> <span class="text-primary">In
+              Touch</span></h1>
+          <form>
+            <div class="row g-3">
+              <div class="col-md-6">
+                <div class="form-floating">
+                  <input type="text" class="form-control bg-light border-0" id="name" placeholder="Your Name" />
+                  <label for="name">Your Name</label>
+                </div>
+              </div>
+              <div class="col-6">
+                <div class="form-floating">
+                  <input type="number" class="form-control bg-light border-0" id="number" placeholder="Contact" />
+                  <label for="number">Your Contact</label>
+                </div>
+              </div>
+              <div class="col-md-12">
+                <div class="form-floating">
+                  <input type="email" class="form-control bg-light border-0" id="email" placeholder="Your Email" />
+                  <label for="email">Your Email</label>
+                </div>
+              </div>
+              <div class="col-12">
+                <div class="form-floating">
+                  <textarea class="form-control bg-light border-0" placeholder="Leave a message here" id="message"
+                    style="height: 100px"></textarea>
+                  <label for="message">Message</label>
+                </div>
+              </div>
+              <div class="col-12">
+                <button class="btn btn-primary w-100 py-3" type="submit">
+                  Send Message
+                </button>
+              </div>
+            </div>
+          </form>
+        </div>
+        <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.5s">
+          <div class="h-100" style="min-height: 400px">
+            <iframe class="rounded w-100 h-100"
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3001156.4288297426!2d-78.01371936852176!3d42.72876761954724!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4ccc4bf0f123a5a9%3A0xddcfc6c1de189567!2sNew%20York%2C%20USA!5e0!3m2!1sen!2sbd!4v1603794290143!5m2!1sen!2sbd"
+              frameborder="0" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+          </div>
+        </div>
+      </div>
+      <div class="row g-4 mb-2 mt-3">
+        <div class="col-lg-4 wow fadeInUp" data-wow-delay="0.1s">
+          <div class="h-100 bg-light d-flex align-items-center p-5 box-shadow">
+            <div class="btn-lg-square bg-white flex-shrink-0">
+              <i class="fa-brands fa-square-whatsapp text-primary" style="font-size: 30px;"></i>
+            </div>
+            <div class="ms-4">
+              <p class="mb-2">
+                <span class="text-primary me-2">#</span>WhatApp Now
+              </p>
+              <h5 class="mb-0">+91 776690319</h5>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4 wow fadeInUp " data-wow-delay="0.3s">
+          <div class="h-100 bg-light d-flex align-items-center p-5 box-shadow">
+            <div class="btn-lg-square bg-white flex-shrink-0">
+              <i class="fa fa-phone-alt text-primary" style="font-size: 30px;"></i>
+            </div>
+            <div class="ms-4">
+              <p class="mb-2">
+                <span class="text-primary me-2">#</span>Call Now
+              </p>
+              <h5 class="mb-0">+91 776690319</h5>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4 wow fadeInUp" data-wow-delay="0.5s">
+          <div class="h-100 bg-light d-flex align-items-center p-5 box-shadow">
+            <div class="btn-lg-square bg-white flex-shrink-0">
+              <i class="fa fa-envelope-open text-primary" style="font-size: 30px;"></i>
+            </div>
+            <div class="ms-4">
+              <p class="mb-2">
+                <span class="text-primary me-2">#</span>Mail Now
+              </p>
+              <h5 class="mb-0">info@krishcogroup.com</h5>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- Contact End -->
+
+  <!-- Footer Start -->
+  <div class="container-fluid footer bg-dark text-light footer mt-5 pt-5 wow fadeIn" data-wow-delay="0.1s">
+    <div class="container py-5">
+      <div class="row g-6" style="margin-left: 50px;">
+        <div class="col-lg-6 col-md-6" id="br">
+          <h5 class="text-light mb-4">Address</h5>
+          <p class="mb-2" style="display: flex;">
+            <i class="fa fa-map-marker-alt me-3"></i><span>Krishco Engineers (P) Limited, Avinashi Road, Peelamedu,
+              Coimbatore</span>
+          </p>
+          <p class="mb-2">
+            <i class="fa fa-map-marker-alt me-3"></i>Krishco Tower, Via Transport Nagar Gate No. 1,Patna-800026
+          </p>
+          <p class="mb-2">
+            <i class="fa fa-phone-alt me-3"></i> +91 7766909319
+          </p>
+          <p class="mb-2">
+            <i class="fa fa-envelope me-3"></i>info@krishcogroup.com
+          </p>
+
+        </div>
+        <div class="col-lg-3 col-md-6" id="br">
+          <h5 class="text-light mb-4">Quick Links</h5>
+          <a class="btn btn-link" href="about.html">About Us</a>
+          <a class="btn btn-link" href="contact.html">Contact Us</a>
+          <a class="btn btn-link" href="product.html">Product</a>
+          <a class="btn btn-link" href="blog.html">Blog</a>
+          <a class="btn btn-link" href="gallery.html">Gallary</a>
+        </div>
+        <div class="col-lg-3 col-md-6" id="br">
+          <div class="position-relative mx-auto" style="max-width: 400px;top: 30px;">
+            <input class="form-control border-0 w-100 py-3 ps-4 pe-5" type="text" placeholder="Your email" />
+            <button type="button" class="btn btn-primary py-2 position-absolute top-0 end-0 mt-2 me-2">
+              SignUp
+            </button>
+          </div>
+          <div class="d-flex mt-2" style="position: relative;top:50px;">
+            <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-twitter"></i></a><br>
+            <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-facebook-f"></i></a>
+            <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-youtube"></i></a>
+            <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-linkedin-in"></i></a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="container">
+      <div class="copyright">
+        <div class="row">
+          <p style="text-align: center;">Copyright &copy; Krishco Engineers (P) Limited | Developed & Maintained By
+            <span class="text-primary">Rays Edutech Private Limited</span>
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- Footer End -->
+
+  <!-- Back to Top -->
+  <a href="#" class="btn btn-lg btn-primary btn-lg-square back-to-top"><i class="bi bi-arrow-up"></i></a>
+
+  <!-- JavaScript Libraries -->
+  <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="lib/wow/wow.min.js"></script>
+  <script src="lib/easing/easing.min.js"></script>
+  <script src="lib/waypoints/waypoints.min.js"></script>
+  <script src="lib/counterup/counterup.min.js"></script>
+  <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+  <script src="lib/lightbox/js/lightbox.min.js"></script>
+
+  <!-- Template Javascript -->
+  <script src="js/main.js"></script>
+  <script>
+    $('#all-products').on('click', function () {
+      $('.nav-link.active').css({ 'background-color': 'grey' })
+      $('.nav-link').css({ 'background-color': '' })
+      $('.nav-link ').css({ 'background-color': '' })
+      $('.nav-link ').css({ 'background-color': '' })
+      $('.all-products').css({ 'display': 'flex' })
+      $('.product-pump').css({ 'display': 'none' })
+      $('.product-motor').css({ 'display': 'none' })
+      $('.product-pipes').css({ 'display': 'none' })
+    })
+    $('#pumps').on('click', function () {
+      $('.all-products').css({ 'display': 'none' })
+      $('.product-pump').css({ 'display': 'flex' })
+      $('.product-motor').css({ 'display': 'none' })
+      $('.product-pipes').css({ 'display': 'none' })
+    })
+    $('#motor').on('click', function () {
+      $('.all-products').css({ 'display': 'none' })
+      $('.product-pump').css({ 'display': 'none' })
+      $('.product-motor').css({ 'display': 'flex' })
+      $('.product-pipes').css({ 'display': 'none' })
+    })
+    $('#pipes-and-fittings').on('click', function () {
+      $('.all-products').css({ 'display': 'none' })
+      $('.product-pump').css({ 'display': 'none' })
+      $('.product-motor').css({ 'display': 'none' })
+      $('.product-pipes').css({ 'display': 'flex' })
+    })
+  </script>
+</body>
+
+</html>

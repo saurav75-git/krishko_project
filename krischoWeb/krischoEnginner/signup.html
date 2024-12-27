@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Signup Form</title>
+    <style>
+        body {
+            /* background-image: url('../organic-1.0.0/images/login.avif'); */
+            font-family: Arial, sans-serif;
+            background-color: white;
+            display: flex;
+            justify-content: right;
+            padding-right: 10%;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            /* background-size: cover; */
+        }
+
+        .logo {
+            width: 15rem;
+        }
+
+        .container {
+            background-color: white;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.801);
+            width: 400px;
+        }
+
+        h2 {
+            margin-bottom: 20px;
+            text-align: center;
+        }
+
+        .form-group {
+            margin-bottom: 15px;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 5px;
+        }
+
+        input {
+            width: 100%;
+            padding: 10px;
+            box-sizing: border-box;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+
+        a {
+            text-decoration: none;
+            color: green;
+        }
+
+        #submit {
+            width: 100%;
+            padding: 10px;
+            background-color: rgb(50, 169, 110);
+            border: none;
+            color: whitesmoke;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 20px;
+        }
+
+        .login {
+            text-align: center;
+        }
+
+        #submit:hover {
+            background-color: rgb(61, 207, 134);
+            color: whitesmoke;
+            border: 2px solid whitesmoke;
+        }
+
+        #message {
+            margin-top: 20px;
+            text-align: center;
+        }
+
+        .error {
+            color: red;
+            font-size: 0.9em;
+        }
+
+        .password-hint {
+            font-size: 0.9em;
+            color: #666;
+            margin-top: 5px;
+            display: none;
+        }
+
+        .password-strength {
+            margin-top: 5px;
+        }
+
+        .password-strength div {
+            height: 5px;
+            border-radius: 4px;
+        }
+
+        .weak {
+            width: 33%;
+            background-color: red;
+        }
+
+        .medium {
+            width: 66%;
+            background-color: orange;
+        }
+
+        .strong {
+            width: 100%;
+            background-color: green;
+        }
+
+        p {
+            font-size: 12px;
+        }
+        #select{
+            width: 100%;
+            padding: 8px;
+            box-sizing: border-box;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            color: rgb(89, 89, 89);
+            
+        }
+    </style>
+</head>
+
+<body>
+    <div style="position: relative; right: 10rem;">
+        <img src="/krishkoImge/Mobile login.gif" alt="">
+    </div>
+    <div class="container">
+        <h2><img class="logo" src="/krishkoImge/krishco-logo-bg.jpg" alt=""></h2>
+        <h4> New here? </h4>
+        <p style="position: relative; bottom: 15px; font-size: 12px;">Signing up is easy. It only takes a few steps</p>
+        <form id="signupForm">
+            <div class="form-group">
+                <!-- <label for="name">Name</label> -->
+                <input type="text" class="name" id="name" name="name" placeholder="Full name(*)" required>
+                <span></span>
+            </div>
+            <div class="form-group">
+                <!-- <label for="name">Name</label> -->
+                <input type="number" class="number" id="number" name="number" placeholder="Contact no.(*)" required>
+                <span></span>
+            </div>
+            <div class="form-group">
+                <!-- <label for="email">Email</label> -->
+                <input type="email" id="email" name="email" placeholder="Email-Id(*)" required>
+            </div>
+            <div class="form-group">
+                <select name="select" id="select">
+                    <option value="select any Group(*)">select any Group(*)</option>
+                    <option value="Influncer">Influncer</option>
+                    <option value="Channel partner">Channel partner</option>
+                    <option value="Costumer">Costumer</option>
+                    <option value="User">User</option>
+                </select>
+                <span></span>
+            </div>
+            <div class="form-group">
+                <select name="select" id="select">
+                    <option value="select any State(*)">select any state(*)</option>
+                    <option value="Andhra Pradesh">Andhra Pradesh</option>
+                    <option value="Andhra Pradesh">Andhra Pradesh</option>
+                    <option value="Assam">Assam</option>
+                    <option value="Bihar">Bihar</option>
+                    <option value="Chhattisgarh">Chhattisgarh</option>
+                    <option value="Goa">Goa</option>
+                    <option value="Gujarat">Gujarat</option>
+                    <option value="Haryana">Haryana</option>
+                    <option value="Himachal Pradesh">Himachal Pradesh</option>
+                    <option value="Jharkhand">Jharkhand</option>
+                    <option value="Karnataka">Karnataka</option>
+                    <option value="Karnataka">Karnataka</option>
+                    <option value="Madhya Pradesh">Madhya Pradesh</option>
+                    <option value="Maharashtra">Maharashtra</option>
+                    <option value="Manipur">Manipur</option>
+                    <option value="Meghalaya">Meghalaya</option>
+                    <option value="Mizoram">Mizoram</option>
+                    <option value="Nagaland">Nagaland</option>
+                    <option value="Odisha">Odisha</option>
+                    <option value="Punjab">Punjab</option>
+                    <option value="Rajasthan">Rajasthan</option>
+                    <option value="Sikkim">Sikkim</option>
+                    <option value="Tamil Nadu">Tamil Nadu</option>
+                    <option value="Telangana">Telangana</option>
+                    <option value="Tripura">Tripura</option>
+                    <option value="Uttar Pradesh">Uttar Pradesh</option>
+                    <option value="Uttarakhand">Uttarakhand</option>
+                    <option value="West Bengal">West Bengal</option>
+
+                </select>
+                <span></span>
+            </div>
+            <div class="form-group">
+                <select name="select" id="select">
+                    <option value="select any District(*)">select any District(*)</option>
+                    <option value="Influncer">Influncer</option>
+                    <option value="Channel partner">Channel partner</option>
+                    <option value="Costumer">Costumer</option>
+                    <option value="User">User</option>
+                </select>
+                <span></span>
+            </div>
+            <div class="form-group">
+                <!-- <label for="name">Name</label> -->
+                <input type="text" class="name" id="name" name="name" placeholder="City(*)" required>
+                <span></span>
+            </div>
+            <div class="form-group">
+                <!-- <label for="password">Password</label> -->
+                <input type="password" id="password" name="password" placeholder="Password(*)" required>
+                <div class="password-hint" id="passwordHint">
+                    Password must be at least 8 characters long, and include at
+                    least one uppercase letter, one lowercase letter, one
+                    number, and one special character.
+                </div>
+                <span id="passwordError" class="error"></span>
+                <div class="password-strength" id="passwordStrength"></div>
+            </div>
+            <div class="form-group">
+                <!-- <label for="confirmPassword">Confirm Password</label> -->
+                <input type="password" id="confirmPassword" name="confirmPassword" placeholder="Confirm password(*)" required>
+                <span id="confirmPasswordError" class="error"></span>
+            </div>
+            <input id="submit" type="button" value="Signup">
+            <p id="error" style="color: red; display: none;">Passwords do not match!</p>
+            <!-- <button id="submit" type="submit">Signup</button> -->
+            <div class="login">
+                <p>Already have an account ! <a href="login.html">Login</a></p>
+            </div>
+        </form>
+        <p id="message"></p>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="../organic-1.0.0/js/jquery-1.4.1.js"></script>
+    <script>
+        $('input').on('focusout', function () {
+            $(this).siblings('span').html("");
+            if ($(this).val() == "") {
+                $(this).css({ 'border': '2px solid red', 'color': 'red' });
+                $(this).val("* Field is mandatory");
+            }
+        });
+        $('input').on('focusin', function () {
+            $(this).siblings('span').html("");
+            if ($(this).val() == "* Field is mandatory") {
+                $(this).css({ 'border': '2px solid red', 'color': 'black' });
+                $(this).val("");
+            }
+        });
+        $(document).ready(function () {
+            $('#confirmPassword').on('keyup', function () {
+                var password = $('#password').val();
+                var confirmPassword = $('#confirmPassword').val();
+
+                if (password === confirmPassword) {
+                    // If the passwords match
+                    $('#error').hide();
+                    $('#submitBtn').prop('disabled', false); // Enable submit button
+                } else {
+                    // If the passwords do not match
+                    $('#error').show();
+                    $('#submitBtn').prop('disabled', true); // Disable submit button
+                }
+            });
+        });
+        $('.name').on('keypress', function (e) {
+            ch = e.which;
+            if (ch == 32 && e.target.selectionStart == 0)
+                return false;
+            else if (ch == 32 && $(this).val().slice(-1) === ' ')
+                return false;
+            else if (!(ch >= 65 && ch <= 90 || ch >= 97 && ch <= 122 || ch == 32)) {
+                $(this).siblings('span').html("Only alphabets and space allowed");
+                return false;
+            }
+            else
+                $(this).siblings('span').html("");
+        });
+        $('#submit').on('click', function () {
+            // console.log($('input[name="r"]:checked').val())
+            // console.log($('input[name="Gender"]:checked').val())
+            // a=$('#sname').val()
+            flag = true
+            const chk = ['#name', '#email', '#password', '#confirmPassword'];
+            for (i in chk) {
+                data = $(chk[i]).val()
+                if (data == '' || data == "* Field is mandatory") {
+                    $(chk[i]).css({ 'border': '2px solid red', 'color': 'red' });
+                    $(chk[i]).val("* Field is mandatory");
+                    flag = false
+                }
+            }
+            if (flag) {
+                $.ajax({
+                    method: 'post',
+                    url: 'Profile.py',
+                    data: {
+                        'v': 'insert',
+                        't1': $('#name').val(),
+                        't2': $('#email').val(),
+                        't3': $('#password').val(),
+                    },
+                    success: function (data) {
+                        // alert(data);
+                        // console.log(data);
+                        Swal.fire({
+                            title: data,
+                            showConfirmButton: true,
+                        });
+                    }
+                });
+            }
+        });
+    </script>
+</body>
+
+</html>

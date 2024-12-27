@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="keywords"
+          content="unique login form,leamug login form,boostrap login form,responsive login form,free css html login form,download login form">
+    <meta name="author" content="leamug">
+    <title>Unique Login Form | Bootstrap Templates</title>
+    <style>
+          body {
+            background-image:url('../organic-1.0.0/images/login2.avif');
+            font-family: Arial, sans-serif;
+            background-color: white;
+            display: flex;
+            padding-left: 10%;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-size: cover;
+        }
+
+        .container {
+            background-color: white;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.925);
+            width: 350px;
+        }
+        .logo{
+            width: 15rem;
+        }
+        h2 {
+            margin-bottom: 20px;
+            text-align: center;
+        }
+
+        .form-group {
+            margin-bottom: 15px;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 5px;
+        }
+
+        input {
+            width: 100%;
+            padding: 10px;
+            box-sizing: border-box;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+
+        #forget {
+            width: 100%;
+            padding: 10px;
+            background-color: rgb(50, 169, 110);
+            border: none;
+            color: whitesmoke;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        #forget:hover {
+            background-color: rgb(61, 207, 134);
+            color: whitesmoke;
+            border: 2px solid whitesmoke;
+        }
+        .login{
+            text-align: center;
+        }
+        a{
+            text-decoration: none;
+            color: blue;
+        }
+        #message {
+            margin-top: 20px;
+            text-align: center;
+        }
+        h3{
+            text-align: center;
+        }
+        .error {
+            color: red;
+            font-size: 0.9em;
+        }
+
+        .password-hint {
+            font-size: 0.9em;
+            color: #666;
+            margin-top: 5px;
+            display: none;
+        }
+
+        .password-strength {
+            margin-top: 5px;
+        }
+
+        .password-strength div {
+            height: 5px;
+            border-radius: 4px;
+        }
+
+        .weak {
+            width: 33%;
+            background-color: red;
+        }
+
+        .medium {
+            width: 66%;
+            background-color: orange;
+        }
+
+        .strong {
+            width: 100%;
+            background-color: green;
+        }
+        p{
+            font-size: 12px;
+        }
+    </style>
+</head>
+<body>
+    <div style="margin-left: 3rem;">
+        <img src="/krishkoImge/Two factor authentication.gif" alt="">
+    </div>
+<div class="container">
+    <h2><img class="logo" src="/krishkoImge/krishco-logo-bg.jpg" alt=""></h2>
+    <h4>Welcome to Krishco</h4>
+        <p style="position: relative; bottom: 15px; font-size: 12px;">Sign in to continue.</p>
+    <form id="signupForm">
+        <div class="form-group">
+            <!-- <label for="email">Email</label> -->
+            <input type="email" id="email" name="email" placeholder="Email-Id" required>
+        </div>
+       
+        <input type="button" value="Forget" id="forget">
+        <div class="login">
+            <p>Don't have an account? <a href="login.html">Login</a></p>
+        </div>
+    </form>
+    <p id="message"></p>
+</div>
+
+</body>
+</html>
