@@ -2,140 +2,354 @@
 <html lang="en">
 
 <head>
-    <meta charset="utf-8" />
-    <title>KRISHCO-selfplumbring</title>
-    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
-    <meta content="" name="keywords" />
-    <meta content="" name="description" />
+  <meta charset="utf-8" />
+  <title>KRISHCO-selfplumbring</title>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+  <meta content="" name="keywords" />
+  <meta content="" name="description" />
 
-    <!-- Favicon -->
-    <link href="/krishkoImge/krishco-logo-bg.jpg" rel="icon" />
+  <!-- Favicon -->
+  <link href="/krishkoImge/krishco-logo-bg.jpg" rel="icon" />
 
-    <!-- Google Web Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-        href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500&family=Quicksand:wght@600;700&display=swap"
-        rel="stylesheet" />
+  <!-- Google Web Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500&family=Quicksand:wght@600;700&display=swap"
+    rel="stylesheet" />
 
-    <!-- Icon Font Stylesheet -->
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet" />
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet" />
+  <!-- Icon Font Stylesheet -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet" />
 
-    <!-- Libraries Stylesheet -->
-    <link href="lib/animate/animate.min.css" rel="stylesheet" />
-    <link href="lib/lightbox/css/lightbox.min.css" rel="stylesheet" />
-    <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet" />
+  <!-- Libraries Stylesheet -->
+  <link href="lib/animate/animate.min.css" rel="stylesheet" />
+  <link href="lib/lightbox/css/lightbox.min.css" rel="stylesheet" />
+  <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet" />
 
-    <!-- Customized Bootstrap Stylesheet -->
-    <link href="css/bootstrap.min.css" rel="stylesheet" />
+  <!-- Customized Bootstrap Stylesheet -->
+  <link href="css/bootstrap.min.css" rel="stylesheet" />
+  <link rel="stylesheet" href="css/pop.css">
 
-    <!-- Template Stylesheet -->
-    <link href="css/style.css" rel="stylesheet" />
-    <!-- fontawasme cdn -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css"
-        integrity="sha512-5Hs3dF2AEPkpNAR7UiOHba+lRSJNeM2ECkwxUIxC1Q/FLycGTbNapWXB4tP889k5T5Ju8fs4b1P5z/iB4nMfSQ=="
-        crossorigin="anonymous" referrerpolicy="no-referrer" />
-        <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&display=swap" rel="stylesheet">
-    <style>
-        /* *{
+  <!-- Template Stylesheet -->
+  <link href="css/style.css" rel="stylesheet" />
+  <!-- fontawasme cdn -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css"
+    integrity="sha512-5Hs3dF2AEPkpNAR7UiOHba+lRSJNeM2ECkwxUIxC1Q/FLycGTbNapWXB4tP889k5T5Ju8fs4b1P5z/iB4nMfSQ=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css"
+    integrity="sha512-5Hs3dF2AEPkpNAR7UiOHba+lRSJNeM2ECkwxUIxC1Q/FLycGTbNapWXB4tP889k5T5Ju8fs4b1P5z/iB4nMfSQ=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <style>
+    /* *{
         border: 1px solid red;
       } */
-        .box-shadow {
-            box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.5);
-        }
+    .box-shadow {
+      box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.5);
+    }
 
-        /* #br{
+    /* #br{
         border: 1px solid red;
       } */
-        .caveat-uniquifier{
-    font-family: Caveat;
-  font-optical-sizing: auto;
-  font-weight: weight;
-  font-style: normal;
-}
-    </style>
+    .caveat-uniquifier {
+      font-family: Caveat;
+      font-optical-sizing: auto;
+      font-weight: weight;
+      font-style: normal;
+    }
+
+    /* Optional: Style for the pop-up window content */
+    #popupWindow {
+      display: none;
+      /* Hidden by default */
+      position: fixed;
+      left: 50%;
+      top: 50%;
+      color: white;
+      transform: translate(-50%, -50%);
+      background-color: rgba(0, 0, 0, 0.795);
+      padding: 20px;
+      box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
+      border-radius: 10px;
+      z-index: 9999;
+    }
+
+    /* Optional: Background overlay */
+    #overlay {
+      display: none;
+      position: fixed;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.247);
+      z-index: 9998;
+    }
+  </style>
+  <link rel="stylesheet" href="css/side.css">
 </head>
 
 <body>
-    <!-- Spinner Start -->
-    <div id="spinner"
-        class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
-        <div class="spinner-border text-primary" style="width: 3rem; height: 3rem" role="status">
-            <span class="sr-only">Loading...</span>
-        </div>
+  <!-- Spinner Start -->
+  <div id="spinner"
+    class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
+    <div class="spinner-border text-primary" style="width: 3rem; height: 3rem" role="status">
+      <span class="sr-only">Loading...</span>
     </div>
-    <!-- Spinner End -->
+  </div>
+  <!-- Spinner End -->
 
-    <!-- Navbar Start -->
-    <nav class="navbar navbar-expand-lg bg-white navbar-light sticky-top py-lg-0 px-4 px-lg-5 box-shadow wow fadeIn "
-        custom-navbar-lg data-wow-delay="0.1s">
-        <a href="index.html" class="navbar-brand p-0">
-            <img class="img-fluid me-3" src="/krishkoImge/krishco-logo-bg.jpg" alt="Icon" />
-        </a>
-        <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class=" navbar-collapse py-4 py-lg-0" id="navbarCollapse">
-            <div class="navbar-nav ms-auto " style="font-size: 40px;">
-                <a href="index.html" class="nav-item nav-link active"><b><i class="fa-solid fa-house"></i></b></a>
-                <a href="product.html" class="nav-item nav-link"><b>product</b></a>
-                <a href="blog.html" class="nav-item nav-link"><b>Blog</b></a>
-                <div class="nav-item dropdown">
-                    <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown"><b>Company</b></a>
-                    <div class="dropdown-menu rounded-0 rounded-bottom m-0">
-                        <a href="about.html" class="dropdown-item">About us</a>
-                        <a href="gallery.html" class="dropdown-item">Our gallery</a>
-                    </div>
-                </div>
-                <a href="contact.html" class="nav-item nav-link"><b>contact</b></a>
+  <!-- Navbar Start -->
+  <nav class="navbar navbar-expand-lg bg-white navbar-light sticky-top py-lg-0 px-4 px-lg-5 box-shadow wow fadeIn "
+    custom-navbar-lg data-wow-delay="0.1s">
+    <a href="index.html" class="navbar-brand p-0">
+      <img class="img-fluid me-3" src="/krishkoImge/krishco-logo-bg.jpg" alt="Icon" />
+    </a>
+    <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class=" navbar-collapse py-4 py-lg-0" id="navbarCollapse">
+      <div class="navbar-nav ms-auto " style="font-size: 40px;">
+        <a href="index.html" class="nav-item nav-link active"><b><i class="fa-solid fa-house"></i></b></a>
+        <a href="product.html" class="nav-item nav-link"><b>product</b></a>
+        <a href="blog.html" class="nav-item nav-link"><b>Blog</b></a>
+        <div class="nav-item dropdown">
+          <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown"><b>Company</b></a>
+          <div class="dropdown-menu rounded-0 rounded-bottom m-0">
+            <a href="about.html" class="dropdown-item">About us</a>
+            <a href="gallery.html" class="dropdown-item">Our gallery</a>
+          </div>
+        </div>
+        <a href="contact.html" class="nav-item nav-link"><b>contact</b></a>
+      </div>
+      <a href="login.html" class="btn btn-primary"><i class="fa-solid fa-arrow-right-to-bracket"></i>&nbsp; LOGIN</a>
+    </div>
+  </nav>
+  <!-- Navbar End -->
+  <!-- pop-up start -->
+  <div class="vive">
+    <div style="width: 80%; height: 70%; margin-top: 4%; background-color: rgb(31, 31, 31)">
+      <div style="width: 100%; height: 100%; display: flex;  box-shadow: 5px 10px 5px rgb(117, 114, 114);">
+        <div style="width: 50%; height: 100%; background-color: white;">
+          <img style="height: 100%;" src="/krishkoImge/vibe-series.jpeg" alt="">
+        </div>
+        <div style="width: 50%; height: 100%; padding: 2%;">
+          <h4 style="color: rgb(240, 231, 231);">VIBE SERIES</h4>
+                    <div style="width: 10rem; border: 1px solid green; border-radius: 2rem; text-align: center;">Specification</div>
+                    <hr>
+                    <tr><td>Suction Lift</td><td>Up to 6 meter</td></tr>
+                    <hr>
+                    <tr><td>Motor Rating</td><td>0.37-1.10 kW (0.50-1.50HP)</td></tr>
+                    <hr>
+                    <tr><td>Supply Phase</td><td>Single Phase</td></tr>
+                    <hr>
+                    <tr><td>Pipe Size</td><td>1" X 1"</td></tr>
+                    <hr>
+                    <tr><td>Head</td><td>Up to 40 Metres</td></tr>
+                    <hr>
+                    <tr><td>Discharge</td><td>Up to 2850 LPH</td></tr>
+        </div>
+      </div>
+      <div style="position: relative; width: 4%; height: 10%; align-items: center;; padding: .5%; bottom: 100%; left: 95%;">
+        <div id="vive-close" class="close"><i class="fa-solid fa-circle-xmark"></i></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="kiwi">
+    <div style="width: 80%; height: 70%; margin-top: 4%; background-color: rgb(15, 15, 15)">
+      <div style="width: 100%; height: 100%; display: flex; box-shadow: 5px 10px 5px rgb(117, 114, 114);">
+        <div style="width: 50%; height: 100%; background-color: white;">
+          <img style="height: 100%;" src="/krishkoImge/kiwi-self-primering-pump.jpeg" alt="">
+        </div>
+        <div style="width: 50%; height: 100%; padding: 2%;">
+          <h4 style="color: white;">Kiwi Self Primering-pump</h4>
+                    <div style="width: 10rem; border: 1px solid green; border-radius: 2rem; text-align: center;">Specification</div>
+                    <hr>
+                    <tr><td>Suction Lift</td><td>Up to 6 meter</td></tr>
+                    <hr>
+                    <tr><td>Motor Rating</td><td>0.37-1.10 kW (0.50-1.50HP)</td></tr>
+                    <hr>
+                    <tr><td>Supply Phase</td><td>Single Phase</td></tr>
+                    <hr>
+                    <tr><td>Pipe Size</td><td>1" X 1"</td></tr>
+                    <hr>
+                    <tr><td>Head</td><td>Up to 40 Metres</td></tr>
+                    <hr>
+                    <tr><td>Discharge</td><td>Up to 2850 LPH</td></tr>
+        </div>
+      </div>
+      <div style="position: relative; width: 4%; height: 10%; justify-items: center; padding: .5%; bottom: 100%; left: 95%;">
+        <div id="kiwi-close" class="close" ><i class="fa-solid fa-circle-xmark"></i></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="turtle">
+    <div style="width: 80%; height: 70%; margin-top: 4%; background-color: rgb(15, 15, 15)">
+      <div style="width: 100%; height: 100%; display: flex; box-shadow: 5px 10px 5px rgb(117, 114, 114);">
+        <div style="width: 50%; height: 100%; background-color: white;">
+          <img style="height: 100%;" src="/krishkoImge/turtle-series-pump.jpeg" alt="">
+        </div>
+        <div style="width: 50%; height: 100%; padding: 2%;">
+          <h4 style="color: white;">Turtle Series Pump</h4>
+                    <div style="width: 10rem; border: 1px solid green; border-radius: 2rem; text-align: center;">Specification</div>
+                    <hr>
+                    <tr><td>Suction Lift</td><td>Up to 6 meter</td></tr>
+                    <hr>
+                    <tr><td>Motor Rating</td><td>0.37-1.10 kW (0.50-1.50HP)</td></tr>
+                    <hr>
+                    <tr><td>Supply Phase</td><td>Single Phase</td></tr>
+                    <hr>
+                    <tr><td>Pipe Size</td><td>1" X 1"</td></tr>
+                    <hr>
+                    <tr><td>Head</td><td>Up to 40 Metres</td></tr>
+                    <hr>
+                    <tr><td>Discharge</td><td>Up to 2850 LPH</td></tr>
+        </div>
+      </div>
+      <div style="position: relative; width: 4%; height: 10%; justify-items: center; padding: .5%; bottom: 100%; left: 95%;">
+        <div id="turtle-close" class="close"><i class="fa-solid fa-circle-xmark"></i></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="tiger">
+    <div style="width: 80%; height: 70%; margin-top: 4%; background-color: rgb(15, 15, 15)">
+      <div style="width: 100%; height: 100%; display: flex; box-shadow: 5px 10px 5px rgb(117, 114, 114);">
+        <div style="width: 50%; height: 100%; background-color: white;">
+          <img style="height: 100%;" src="/krishkoImge/tiger-self-primering-pump.jpeg" alt="">
+        </div>
+        <div style="width: 50%; height: 100%; padding: 2%;">
+          <h4 style="color: white;">Tiger Self Primering Pump</h4>
+                    <div style="width: 10rem; border: 1px solid green; border-radius: 2rem; text-align: center;">Specification</div>
+                    <hr>
+                    <tr><td>Suction Lift</td><td>Up to 6 meter</td></tr>
+                    <hr>
+                    <tr><td>Motor Rating</td><td>0.37-1.10 kW (0.50-1.50HP)</td></tr>
+                    <hr>
+                    <tr><td>Supply Phase</td><td>Single Phase</td></tr>
+                    <hr>
+                    <tr><td>Pipe Size</td><td>1" X 1"</td></tr>
+                    <hr>
+                    <tr><td>Head</td><td>Up to 40 Metres</td></tr>
+                    <hr>
+                    <tr><td>Discharge</td><td>Up to 2850 LPH</td></tr>
+        </div>
+      </div>
+      <div style="position: relative; width: 4%; height: 10%; justify-items: center; padding: .5%; bottom: 100%; left: 95%;">
+        <div id="tiger-close" class="close"><i class="fa-solid fa-circle-xmark"></i></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="hp1">
+    <div style="width: 80%; height: 70%; margin-top: 4%; background-color: rgb(15, 15, 15)">
+      <div style="width: 100%; height: 100%; display: flex; box-shadow: 5px 10px 5px rgb(117, 114, 114);">
+        <div style="width: 50%; height: 100%; background-color: white;">
+          <img style="height: 100%;" src="/krishkoImge/1HP-Hippo.jpeg" alt="">
+        </div>
+        <div style="width: 50%; height: 100%; padding: 2%;">
+          <h4 style="color: white;">1HP Hippo</h4>
+                    <div style="width: 10rem; border: 1px solid green; border-radius: 2rem; text-align: center;">Specification</div>
+                    <hr>
+                    <tr><td>Suction Lift</td><td>Up to 6 meter</td></tr>
+                    <hr>
+                    <tr><td>Motor Rating</td><td>0.37-1.10 kW (0.50-1.50HP)</td></tr>
+                    <hr>
+                    <tr><td>Supply Phase</td><td>Single Phase</td></tr>
+                    <hr>
+                    <tr><td>Pipe Size</td><td>1" X 1"</td></tr>
+                    <hr>
+                    <tr><td>Head</td><td>Up to 40 Metres</td></tr>
+                    <hr>
+                    <tr><td>Discharge</td><td>Up to 2850 LPH</td></tr>
+        </div>
+      </div>
+      <div style="position: relative; width: 4%; height: 10%; justify-items: center; padding: .5%; bottom: 100%; left: 95%;">
+        <div id="hp1-close" class="close"><i class="fa-solid fa-xmark"></i></div>
+      </div>
+    </div>
+  </div>
+
+<!-- pop-up end -->
+  <!-- Page Header Start -->
+  <div class="container py-5">
+    <h1 class="display-4 text-dark mb-3 animated slideInDown caveat-uniquifier"
+      style="font-size: 40px; text-align: center;">Self<span class="text-primary">
+        Priming Pumps</span></h1>
+  </div>
+  <!-- Page Header End -->
+
+    <!-- side pannel start -->
+    <div class="rightFixed-btns" data-aos="zoom-out-left">
+      <ul>
+        <li id="li">
+          <a href="https://wa.me/+919708035424?text=Please%20let%20me%20know%20more%20about%20your%20products%20and%20services!!"
+          target="_blank">
+            <i class="fa-brands fa-whatsapp fa-beat" aria-hidden="true"></i>
+            <div class="rightFixed-btns__content" id="content">
+              <!-- <small>WhatsApp</small><br> -->
+              <span>9708035424</span>
             </div>
-            <a href="login.html" class="btn btn-primary"><i class="fa-solid fa-arrow-right-to-bracket"></i>&nbsp; LOGIN</a>
-        </div>
-    </nav>
-    <!-- Navbar End -->
-
-    <!-- Page Header Start -->
-    <div class="container py-5">
-        <h1 class="display-4 text-dark mb-3 animated slideInDown caveat-uniquifier" style="font-size: 40px; text-align: center;">SELF PRIMING<span
-                class="text-primary">
-                 PUMP</span></h1>
+          </a>
+        </li>
+        <li id="li2" class="content2">
+          <a href="#">
+            <i class="fa-solid fa-headset fa-beat"></i>
+            <div class="rightFixed-btns__content" id="content2">
+              <!-- <small>Enquiry</small><br> -->
+              <span>Enquiry Now</span>
+            </div>
+          </a>
+        </li>
+        <li id="li3">
+          <a href="tel:9708035424">
+            <i class="fa fa-phone fa-beat" aria-hidden="true"></i>
+            <div class="rightFixed-btns__content" id="content3">
+              <!-- <small>Calling No.</small><br> -->
+              <span>9708035424</span>
+            </div>
+          </a>
+        </li>
+      </ul>
     </div>
-    <!-- Page Header End -->
+  <!-- side pannel end -->
 
-    <!-- About Start -->
-    <div class="container-xxl py-5">
-        <div class="container">
-            <div class="row g-5">
-                <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.1s">
-                    <p><span class="text-primary me-2"><b># Introducing Krishco Submersible Pumps – Your Reliable Water
-                                Solutionn</b></span></p>
-                    <p class="mb-4">
-                        KRISHCO Regenerative Self Priming Pumpsets are made from top-grade castings, finest components
-                        and high quality gun metal using state-of-the-art technology, to conform to the latest
-                        International Standards. Each & every stage in the manufacturing process is closely monitored
-                        through stringent quality tests to ensure impeccable standards, superior performance and
-                        unmatched durability. Pump volute chambers and impellers are designed to give the best hydraulic
-                        efficiency. These pumpsets are powered by totally enclosed fan cooled two pole motors with
-                        stators of the motors are made up of low att loss lamination and dynamically balanced rotors for
-                        higher efficiency. These pumpsets are wound with high grade enameled copper wire and are fitted
-                        with thermal overload protector.
-                    </p>
-                    <!-- <p><span class="text-primary me-2"><b>1. Exceptional Performance:</b></span></p>
+  <!-- About Start -->
+  <div class="container-xxl py-5">
+    <div class="container">
+      <div class="row g-5">
+        <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.1s">
+          <p><span class="text-primary me-2"><b># Introducing Krishco Submersible Pumps – Your Reliable Water
+                Solutionn</b></span></p>
+          <p class="mb-4">
+            KRISHCO Regenerative Self Priming Pumpsets are made from top-grade castings, finest components
+            and high quality gun metal using state-of-the-art technology, to conform to the latest
+            International Standards. Each & every stage in the manufacturing process is closely monitored
+            through stringent quality tests to ensure impeccable standards, superior performance and
+            unmatched durability. Pump volute chambers and impellers are designed to give the best hydraulic
+            efficiency. These pumpsets are powered by totally enclosed fan cooled two pole motors with
+            stators of the motors are made up of low att loss lamination and dynamically balanced rotors for
+            higher efficiency. These pumpsets are wound with high grade enameled copper wire and are fitted
+            with thermal overload protector.
+          </p>
+          <!-- <p><span class="text-primary me-2"><b>1. Exceptional Performance:</b></span></p>
                     <p class="mb-4">
                         outstanding performance, providing a steady flow of water with optimal pressure. Whether it's
                         for supplying water to overhead tanks, gardens, or other residential uses, these pumps excel in
                         efficiency.
                     </p> -->
-
-                </div>
-                <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.5s" id="br">
-                    <div class="img-border">
-                        <img class="img-fluid" src="/krishkoImge/self-prumering-pump.png" alt="" id="br"
-                            style="background-color: rgb(223, 240, 230);" />
-                    </div>
-                </div>
-                <!-- <div class="col-lg-12 wow fadeInUp" data-wow-delay="0.1s">
+        </div>
+        
+        <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.5s" id="br">
+          <div class="img-border">
+            <img class="img-fluid" src="/krishkoImge/self-prumering-pump.png" alt="" id="br"
+              style="background-color: rgb(223, 240, 230);" />
+          </div>
+        </div>
+        <!-- <div class="col-lg-12 wow fadeInUp" data-wow-delay="0.1s">
                     <p style="position: relative;bottom: 40px;"><span class="text-primary me-2"><b>2. Energy-Efficient
                                 Operation:</b></span>
                     </p>
@@ -145,11 +359,11 @@
                         sustainability and reduced utility bills.
                     </p>
                 </div> -->
-            </div>
-        </div>
+      </div>
     </div>
-    <!-- About End -->
-<!-- 
+  </div>
+  <!-- About End -->
+  <!-- 
     <div class="container-xxl py-5">
         <div class="container">
           <div class="row g-5 mb-5 align-items-end wow fadeInUp" data-wow-delay="0.1s">
@@ -273,7 +487,9 @@
           </div>
         </div>
       </div> -->
-      <!-- our product -->
+  <!-- our product -->
+
+
   <!-- residental Start -->
   <div class="container-xxl py-5">
     <div class="container">
@@ -291,8 +507,10 @@
               <div class="position-relative box-shadow">
                 <img class="img-fluid" src="/krishkoImge/vibe-series.jpeg" alt="" />
                 <div class="animal-text p-4">
-                  <button type="button" class="btn btn-outline-success w-5"
-                     style="text-align: center;">SEE
+                  <!-- <a href="" class="btn btn-outline-success w-5"
+                  style="text-align: center;" id="vibeseries">see more</a> -->
+                  <button type="button" class="btn btn-outline-success w-5" style="text-align: center;"
+                    id="viveseries">SEE
                     MORE</button>
                 </div>
               </div>
@@ -306,7 +524,7 @@
               <div class="position-relative box-shadow">
                 <img class="img-fluid" src="/krishkoImge/kiwi-self-primering-pump.jpeg" alt="" />
                 <div class="animal-text p-4">
-                  <button type="button" class="btn btn-outline-success" style="text-align: center;">SEE MORE</button>
+                  <button type="button" class="btn btn-outline-success" style="text-align: center;"id="kiwi-self-primering-pump">SEE MORE</button>
                   </p>
                 </div>
               </div>
@@ -320,8 +538,7 @@
               <div class="position-relative box-shadow">
                 <img class="img-fluid" src="/krishkoImge/turtle-series-pump.jpeg" alt="" />
                 <div class="animal-text p-4">
-                  <button type="button" class="btn btn-outline-success"
-                    style="text-align: center;">SEE MORE</button>
+                  <button type="button" class="btn btn-outline-success" style="text-align: center;" id="turtle-series-pump">SEE MORE</button>
                   </p>
                 </div>
               </div>
@@ -339,7 +556,7 @@
               <div class="position-relative box-shadow">
                 <img class="img-fluid" src="/krishkoImge/tiger-self-primering-pump.jpeg" alt="" />
                 <div class="animal-text p-4">
-                  <button type="button" class="btn btn-outline-success" style="text-align: center;">SEE MORE</button>
+                  <button type="button" class="btn btn-outline-success" style="text-align: center;" id="tiger-self-primering-pump">SEE MORE</button>
                 </div>
               </div>
             </a>
@@ -353,7 +570,7 @@
               <div class="position-relative box-shadow">
                 <img class="img-fluid" src="/krishkoImge/1HP-Hippo.jpeg" alt="" />
                 <div class="animal-text p-4">
-                  <button type="button" class="btn btn-outline-success" style="text-align: center;">SEE MORE</button>
+                  <button type="button" class="btn btn-outline-success" style="text-align: center;" id="1HP-Hippo">SEE MORE</button>
                   </p>
                 </div>
               </div>
@@ -366,204 +583,205 @@
     </div>
   </div>
   <!-- residentaal  End -->
-    <!-- Membership Start -->
-    <!-- <div class="container-xxl py-5"> -->
+  <!-- Membership Start -->
+  <!-- <div class="container-xxl py-5"> -->
+  <div class="container">
+    <div class="row g-5 mb-5  wow fadeInUp" data-wow-delay="0.1s">
+      <div class="col-lg-6">
+
+      </div>
+
+    </div>
+    <div class="row g-4">
+      <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
+        <div class=" position-relative">
+          <h3 class="text-primary">Features & Benefits</h3><br>
+          <p><i class="fa fa-check text-primary me-3"></i>Ease of Installation</p>
+          <p>
+            <i class="fa fa-check text-primary me-3"></i>Ease of Operation
+          </p>
+          <p>
+            <i class="fa fa-check text-primary me-3"></i>Wide Range of Applications
+          </p>
+          <p>
+            <i class="fa fa-check text-primary me-3"></i>Lower Installation Costs
+
+          </p>
+          <p>
+            <i class="fa fa-check text-primary me-3"></i>Built-in Priming Chamber
+          </p>
+          <p>
+            <i class="fa fa-check text-primary me-3"></i>Compact Design
+          </p>
+          <p>
+            <i class="fa fa-check text-primary me-3"></i>Compact Design
+          </p>
+        </div>
+      </div>
+
+      <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
+        <div class=" position-relative">
+          <!-- <img class="img-fluid" src="img/animal-lg-2.jpg" alt="" /> -->
+          <h3 class="text-primary">Standard & Specifications</h3><br>
+
+          <p><i class="fa fa-check text-primary me-3"></i>Temperature and Pressure Ratings</p>
+          <p>
+            <i class="fa fa-check text-primary me-3"></i>Maximum Suction Lift
+          </p>
+          <p>
+            <i class="fa fa-check text-primary me-3"></i>Construction Materials
+          </p>
+          <p>
+            <i class="fa fa-check text-primary me-3"></i>Pump Type
+          </p>
+          <p>
+            <i class="fa fa-check text-primary me-3"></i>Capacity and Flow Rate
+          </p>
+        </div>
+      </div>
+      <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
+        <div class=" position-relative">
+          <h3 class="text-primary">Fields Of Application</h3><br>
+          <p><i class="fa fa-check text-primary me-3"></i>Wastewater and Sewage Systems</p>
+          <p>
+            <i class="fa fa-check text-primary me-3"></i>Wastewater and Sewage Systems
+          </p>
+          <p>
+            <i class="fa fa-check text-primary me-3"></i>Construction Sites
+          </p>
+          <p>
+            <i class="fa fa-check text-primary me-3"></i>Industrial Processes
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+  </div>
+  <!-- Membership End -->
+
+  <!-- Footer End -->
+  <div class="container-xxl py-5" style="width: 90%;">
+    <div class="row g-4 mb-2 mt-3">
+      <div class="col-lg-4 wow fadeInUp" data-wow-delay="0.1s">
+        <div class="h-100 bg-light d-flex align-items-center p-5 box-shadow">
+          <div class="btn-lg-square bg-white flex-shrink-0">
+            <i class="fa-brands fa-square-whatsapp text-primary" style="font-size: 30px;"></i>
+          </div>
+          <div class="ms-4">
+            <p class="mb-2">
+              <span class="text-primary me-2">#</span>WhatApp Now
+            </p>
+            <h5 class="mb-0">+91 776690319</h5>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-4 wow fadeInUp" data-wow-delay="0.3s">
+        <div class="h-100 bg-light d-flex align-items-center p-5 box-shadow">
+          <div class="btn-lg-square bg-white flex-shrink-0">
+            <i class="fa fa-phone-alt text-primary" style="font-size: 30px;"></i>
+          </div>
+          <div class="ms-4">
+            <p class="mb-2">
+              <span class="text-primary me-2">#</span>Call Now
+            </p>
+            <h5 class="mb-0"> +91 7766909319</h5>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-4 wow fadeInUp" data-wow-delay="0.5s">
+        <div class="h-100 bg-light d-flex align-items-center p-5 box-shadow">
+          <div class="btn-lg-square bg-white flex-shrink-0">
+            <i class="fa fa-envelope-open text-primary" style="font-size: 30px;"></i>
+          </div>
+          <div class="ms-4">
+            <p class="mb-2">
+              <span class="text-primary me-2">#</span>Mail Now
+            </p>
+            <h5 class="mb-0">info@krishcogroup.com</h5>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  </div>
+  </div>
+  
+  <!-- Footer Start -->
+  <div class="container-fluid footer bg-dark text-light footer mt-5 pt-5 wow fadeIn" data-wow-delay="0.1s">
+    <div class="container py-5">
+      <div class="row g-6" style="margin-left: 50px;">
+        <div class="col-lg-6 col-md-6" id="br">
+          <h5 class="text-light mb-4">Address</h5>
+          <p class="mb-2" style="display: flex;">
+            <i class="fa fa-map-marker-alt me-3"></i><span>Krishco Engineers (P) Limited, Avinashi Road,
+              Peelamedu,
+              Coimbatore</span>
+          </p>
+          <p class="mb-2">
+            <i class="fa fa-map-marker-alt me-3"></i>Krishco Tower, Via Transport Nagar Gate No.
+            1,Patna-800026
+          </p>
+          <p class="mb-2">
+            <i class="fa fa-phone-alt me-3"></i> +91 7766909319
+          </p>
+          <p class="mb-2">
+            <i class="fa fa-envelope me-3"></i>info@krishcogroup.com
+          </p>
+
+        </div>
+        <div class="col-lg-3 col-md-6" id="br">
+          <h5 class="text-light mb-4">Quick Links</h5>
+          <a class="btn btn-link" href="about.html">About Us</a>
+          <a class="btn btn-link" href="contact.html">Contact Us</a>
+          <a class="btn btn-link" href="product.html">Product</a>
+          <a class="btn btn-link" href="blog.html">Blog</a>
+          <a class="btn btn-link" href="gallery.html">Gallary</a>
+        </div>
+        <div class="col-lg-3 col-md-6" id="br">
+          <div class="position-relative mx-auto" style="max-width: 400px;top: 30px;">
+            <input class="form-control border-0 w-100 py-3 ps-4 pe-5" type="text" placeholder="Your email" />
+            <button type="button" class="btn btn-primary py-2 position-absolute top-0 end-0 mt-2 me-2">
+              SignUp
+            </button>
+          </div>
+          <div class="d-flex mt-2" style="position: relative;top:50px;">
+            <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-twitter"></i></a><br>
+            <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-facebook-f"></i></a>
+            <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-youtube"></i></a>
+            <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-linkedin-in"></i></a>
+          </div>
+        </div>
+      </div>
+    </div>
     <div class="container">
-        <div class="row g-5 mb-5  wow fadeInUp" data-wow-delay="0.1s">
-            <div class="col-lg-6">
-
-            </div>
-
+      <div class="copyright">
+        <div class="row">
+          <p style="text-align: center;">Copyright &copy; Krishco Engineers (P) Limited | Developed &
+            Maintained By
+            <span class="text-primary"><a href="https://www.raysonline.in/"><u>Rays Edutech Private Limited</u></a></span>
+          </p>
         </div>
-        <div class="row g-4">
-            <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
-                <div class=" position-relative">
-                    <h3 class="text-primary">Features & Benefits</h3><br>
-                    <p><i class="fa fa-check text-primary me-3"></i>Ease of Installation</p>
-                    <p>
-                        <i class="fa fa-check text-primary me-3"></i>Ease of Operation
-                    </p>
-                    <p>
-                        <i class="fa fa-check text-primary me-3"></i>Wide Range of Applications
-                    </p>
-                    <p>
-                        <i class="fa fa-check text-primary me-3"></i>Lower Installation Costs
-
-                    </p>
-                    <p>
-                        <i class="fa fa-check text-primary me-3"></i>Built-in Priming Chamber
-                    </p>
-                    <p>
-                        <i class="fa fa-check text-primary me-3"></i>Compact Design
-                    </p>
-                    <p>
-                        <i class="fa fa-check text-primary me-3"></i>Compact Design
-                    </p>
-                </div>
-            </div>
-
-            <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
-                <div class=" position-relative">
-                    <!-- <img class="img-fluid" src="img/animal-lg-2.jpg" alt="" /> -->
-                    <h3 class="text-primary">Standard & Specifications</h3><br>
-
-                    <p><i class="fa fa-check text-primary me-3"></i>Temperature and Pressure Ratings</p>
-                    <p>
-                        <i class="fa fa-check text-primary me-3"></i>Maximum Suction Lift
-                    </p>
-                    <p>
-                        <i class="fa fa-check text-primary me-3"></i>Construction Materials
-                    </p>
-                    <p>
-                        <i class="fa fa-check text-primary me-3"></i>Pump Type
-                    </p>
-                    <p>
-                        <i class="fa fa-check text-primary me-3"></i>Capacity and Flow Rate
-                    </p>
-                </div>
-            </div>
-            <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
-                <div class=" position-relative">
-                    <h3 class="text-primary">Fields Of Application</h3><br>
-                    <p><i class="fa fa-check text-primary me-3"></i>Wastewater and Sewage Systems</p>
-                    <p>
-                        <i class="fa fa-check text-primary me-3"></i>Wastewater and Sewage Systems
-                    </p>
-                    <p>
-                        <i class="fa fa-check text-primary me-3"></i>Construction Sites
-                    </p>
-                    <p>
-                        <i class="fa fa-check text-primary me-3"></i>Industrial Processes
-                    </p>
-                </div>
-            </div>
-        </div>
+      </div>
     </div>
-    </div>
-    <!-- Membership End -->
+  </div>
+  <!-- Footer End -->
 
-    <!-- Footer End -->
-    <div class="container-xxl py-5" style="width: 90%;">
-        <div class="row g-4 mb-2 mt-3">
-            <div class="col-lg-4 wow fadeInUp" data-wow-delay="0.1s">
-                <div class="h-100 bg-light d-flex align-items-center p-5 box-shadow">
-                    <div class="btn-lg-square bg-white flex-shrink-0">
-                        <i class="fa-brands fa-square-whatsapp text-primary" style="font-size: 30px;"></i>
-                    </div>
-                    <div class="ms-4">
-                        <p class="mb-2">
-                            <span class="text-primary me-2">#</span>WhatApp Now
-                        </p>
-                        <h5 class="mb-0">+91 776690319</h5>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-4 wow fadeInUp" data-wow-delay="0.3s">
-                <div class="h-100 bg-light d-flex align-items-center p-5 box-shadow">
-                    <div class="btn-lg-square bg-white flex-shrink-0">
-                        <i class="fa fa-phone-alt text-primary" style="font-size: 30px;"></i>
-                    </div>
-                    <div class="ms-4">
-                        <p class="mb-2">
-                            <span class="text-primary me-2">#</span>Call Now
-                        </p>
-                        <h5 class="mb-0"> +91 7766909319</h5>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-4 wow fadeInUp" data-wow-delay="0.5s">
-                <div class="h-100 bg-light d-flex align-items-center p-5 box-shadow">
-                    <div class="btn-lg-square bg-white flex-shrink-0">
-                        <i class="fa fa-envelope-open text-primary" style="font-size: 30px;"></i>
-                    </div>
-                    <div class="ms-4">
-                        <p class="mb-2">
-                            <span class="text-primary me-2">#</span>Mail Now
-                        </p>
-                        <h5 class="mb-0">info@krishcogroup.com</h5>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    </div>
-    </div>
-    <!-- Footer Start -->
-    <div class="container-fluid footer bg-dark text-light footer mt-5 pt-5 wow fadeIn" data-wow-delay="0.1s">
-        <div class="container py-5">
-            <div class="row g-6" style="margin-left: 50px;">
-                <div class="col-lg-6 col-md-6" id="br">
-                    <h5 class="text-light mb-4">Address</h5>
-                    <p class="mb-2" style="display: flex;">
-                        <i class="fa fa-map-marker-alt me-3"></i><span>Krishco Engineers (P) Limited, Avinashi Road,
-                            Peelamedu,
-                            Coimbatore</span>
-                    </p>
-                    <p class="mb-2">
-                        <i class="fa fa-map-marker-alt me-3"></i>Krishco Tower, Via Transport Nagar Gate No.
-                        1,Patna-800026
-                    </p>
-                    <p class="mb-2">
-                        <i class="fa fa-phone-alt me-3"></i> +91 7766909319
-                    </p>
-                    <p class="mb-2">
-                        <i class="fa fa-envelope me-3"></i>info@krishcogroup.com
-                    </p>
+  <!-- Back to Top -->
+  <a href="#" class="btn btn-lg btn-primary btn-lg-square back-to-top"><i class="bi bi-arrow-up"></i></a>
 
-                </div>
-                <div class="col-lg-3 col-md-6" id="br">
-                    <h5 class="text-light mb-4">Quick Links</h5>
-                    <a class="btn btn-link" href="about.html">About Us</a>
-                    <a class="btn btn-link" href="contact.html">Contact Us</a>
-                    <a class="btn btn-link" href="product.html">Product</a>
-                    <a class="btn btn-link" href="blog.html">Blog</a>
-                    <a class="btn btn-link" href="gallery.html">Gallary</a>
-                </div>
-                <div class="col-lg-3 col-md-6" id="br">
-                    <div class="position-relative mx-auto" style="max-width: 400px;top: 30px;">
-                        <input class="form-control border-0 w-100 py-3 ps-4 pe-5" type="text"
-                            placeholder="Your email" />
-                        <button type="button" class="btn btn-primary py-2 position-absolute top-0 end-0 mt-2 me-2">
-                            SignUp
-                        </button>
-                    </div>
-                    <div class="d-flex mt-2" style="position: relative;top:50px;">
-                        <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-twitter"></i></a><br>
-                        <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-facebook-f"></i></a>
-                        <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-youtube"></i></a>
-                        <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-linkedin-in"></i></a>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="container">
-            <div class="copyright">
-                <div class="row">
-                    <p style="text-align: center;">Copyright &copy; Krishco Engineers (P) Limited | Developed &
-                        Maintained By
-                        <span class="text-primary">Rays Edutech Private Limited</span>
-                    </p>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- Footer End -->
+  <!-- JavaScript Libraries -->
+  <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="lib/wow/wow.min.js"></script>
+  <script src="lib/easing/easing.min.js"></script>
+  <script src="lib/waypoints/waypoints.min.js"></script>
+  <script src="lib/counterup/counterup.min.js"></script>
+  <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+  <script src="lib/lightbox/js/lightbox.min.js"></script>
 
-    <!-- Back to Top -->
-    <a href="#" class="btn btn-lg btn-primary btn-lg-square back-to-top"><i class="bi bi-arrow-up"></i></a>
-
-    <!-- JavaScript Libraries -->
-    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="lib/wow/wow.min.js"></script>
-    <script src="lib/easing/easing.min.js"></script>
-    <script src="lib/waypoints/waypoints.min.js"></script>
-    <script src="lib/counterup/counterup.min.js"></script>
-    <script src="lib/owlcarousel/owl.carousel.min.js"></script>
-    <script src="lib/lightbox/js/lightbox.min.js"></script>
-
-    <!-- Template Javascript -->
-    <script src="js/main.js"></script>
+  <!-- Template Javascript -->
+  <script src="js/main.js"></script>
+  <script src="js/pop.js"></script>
 </body>
 
 </html>

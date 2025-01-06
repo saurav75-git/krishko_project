@@ -9,6 +9,8 @@
   <meta content="" name="description" />
   <!-- Favicon -->
   <link href="/krishkoImge/krishco-logo-bg.jpg" rel="icon" />
+    <link type="text/css" rel="stylesheet" href="https://odoocdn.com/web/assets/1/e7260d0/web.assets_frontend.min.css"/>
+
 
   <!-- Google Web Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -35,65 +37,126 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css"
     integrity="sha512-5Hs3dF2AEPkpNAR7UiOHba+lRSJNeM2ECkwxUIxC1Q/FLycGTbNapWXB4tP889k5T5Ju8fs4b1P5z/iB4nMfSQ=="
     crossorigin="anonymous" referrerpolicy="no-referrer" />
-  <!-- <link type="text/css" rel="stylesheet" href="https://odoocdn.com/web/assets/1/e7260d0/web.assets_frontend.min.css"/> -->
-  <link rel="stylesheet"
-    href="https://fonts.googleapis.com/css?family=Sofia&effect=neon|outline|emboss|shadow-multiple">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Sofia&effect=neon|outline|emboss|shadow-multiple">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&display=swap" rel="stylesheet">
+  <!-- <link type="text/css" rel="stylesheet" href="https://odoocdn.com/web/assets/1/da24d33/web.assets_frontend.min.css"/> -->
+  
+  <style>
+    /* *{
+      border: 1px solid red;
+    }
+   .br{
+    border: 1px solid green;
+   } */
+    input {
+      width: 100%;
+      border: 1px solid skyblue;
+      border-radius: 5px;
+      padding: 10px;
+      background-color: rgb(250, 250, 250);
+      color: white;
+
+    }
+
+    textarea {
+      width: 100%;
+      border: 1px solid skyblue;
+      border-radius: 5px;
+      padding: 10px;
+    }
+
+    #button {
+      position: relative;
+      left: 20%;
+      width: 20%;
+      height: 10%;
+      border: none;
+      border-radius: 5px;
+      margin: 20px;
+      color: white;
+    }
+
+    .box-shadow {
+      box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.5);
+    }
+
+    /* .br{
+      border: 10px solid  green;
+    } */
+    .animal-item:hover {
+      transform: scale(1.05);
+      transition: 0.2s ease-in-out;
+      /* box-shadow: 4px 4px 10px rgb(0, 0, 0, 0.5); */
+    }
+
+    .caveat-uniquifier {
+      font-family: Caveat;
+      font-optical-sizing: auto;
+      font-weight: weight;
+      font-style: normal;
+    }
+
+    /* Default state */
+    .custom-link {
+      background-color: rgb(220, 220, 220);
+      /* Primary blue */
+      text-decoration: none;
+      transition: background-color 0.3s ease;
+    }
+
+    /* Hover effect */
+    .custom-link:hover {
+      background-color: #198754;
+      /* Darker blue */
+      color: white;
+    }
+
+    /* Active state (when pressed) */
+    .custom-link:active {
+      background-color: #198754;
+      color: white;
+    }
+    .logo-slider {
+          position: relative;
+          overflow: hidden;
+          padding: 2rem;
+          white-space: nowrap;
+      }
+
+      .l-slide {
+          display: inline-block;
+          animation: 12s move infinite linear;
+      }
+      .l-slide:hover .l-slide{
+          animation: none;
+      }
+
+      .l-slide img {
+          box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+          height: 15rem;
+          width: 15rem;
+          margin: 0 1rem;
+          cursor: pointer;
+          position:relative;
+      }
+
+      @keyframes move {
+          from {
+              transform: translateX(0);
+
+          }
+
+          to {
+              transform: translateX(-100%);
+
+          }
+
+      }
+  </style>
+  <link rel="stylesheet" href="css/side.css">
 </head>
-<style>
-  /* *{
-    border: 1px solid red;
-  } */
-  input {
-    width: 100%;
-    border: 1px solid skyblue;
-    border-radius: 5px;
-    padding: 10px;
-    background-color: rgb(250, 250, 250);
-    color: white;
-
-  }
-
-  textarea {
-    width: 100%;
-    border: 1px solid skyblue;
-    border-radius: 5px;
-    padding: 10px;
-  }
-
-  #button {
-    position: relative;
-    left: 20%;
-    width: 20%;
-    height: 10%;
-    border: none;
-    border-radius: 5px;
-    margin: 20px;
-    color: white;
-  }
-
-  .box-shadow {
-    box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.5);
-  }
-
-  /* .br{
-    border: 10px solid  green;
-  } */
-  .animal-item:hover {
-    transform: scale(1.05);
-    transition: 0.2s ease-in-out;
-    /* box-shadow: 4px 4px 10px rgb(0, 0, 0, 0.5); */
-  }
-
- .caveat-uniquifier{
-  font-family: Caveat;
-  font-optical-sizing: auto;
-  font-weight: weight;
-  font-style: normal;
-}
-</style>
 
 <body>
   <!-- Spinner Start -->
@@ -134,7 +197,7 @@
   <!-- Navbar End -->
 
   <!-- Header Start -->
-  <div class="container-fluid bg-dark p-0 mb-8">
+  <div class="container-fluid bg-dark p-0">
     <div class="col-md-12 wow fadeIn" data-wow-delay="0.5s">
       <!-- <button id="button">Search our product</button> -->
       <div class="owl-carousel header-carousel">
@@ -155,6 +218,41 @@
   </div>
   </div>
   <!-- Header End -->
+
+  <!-- side pannel start -->
+  <div class="rightFixed-btns" data-aos="zoom-out-left">
+    <ul>
+      <li id="li">
+        <a href="https://wa.me/+919708035424?text=Please%20let%20me%20know%20more%20about%20your%20products%20and%20services!!"
+          target="_blank">
+          <i class="fa-brands fa-whatsapp fa-beat" aria-hidden="true"></i>
+          <div class="rightFixed-btns__content" id="content">
+            <!-- <small>WhatsApp</small><br> -->
+            <span>9708035424</span>
+          </div>
+        </a>
+      </li>
+      <li id="li2" class="content2">
+        <a href="#">
+          <i class="fa-solid fa-headset fa-beat"></i>
+          <div class="rightFixed-btns__content" id="content2">
+            <!-- <small>Enquiry</small><br> -->
+            <span>Enquiry Now</span>
+          </div>
+        </a>
+      </li>
+      <li id="li3">
+        <a href="tel:9708035424">
+          <i class="fa fa-phone fa-beat" aria-hidden="true"></i>
+          <div class="rightFixed-btns__content" id="content3">
+            <!-- <small>Calling No.</small><br> -->
+            <span>9708035424</span>
+          </div>
+        </a>
+      </li>
+    </ul>
+  </div>
+  <!-- side pannel end -->
 
   <!-- Video Modal Start -->
   <div class="modal modal-video fade" id="videoModal" tabindex="-1" aria-labelledby="exampleModalLabel"
@@ -178,40 +276,41 @@
   <!-- Video Modal End -->
 
   <!-- our product -->
-  <div class="container-xxl py-5">
+  <div class="container-xxl py-5 br">
     <div class="container">
       <div class="row g-5 mb-5 align-items-end wow fadeInUp" data-wow-delay="0.1s">
         <div class="col-lg-12">
           <h1 class="display-5 mb-0 caveat-uniquifier" style="text-align: center;">
-            OUR<span class="text-primary"> PRODUCT</span>
+            Our
+            <span class="text-dark x_wd_green_highlight_bold_05"> Product</span>
           </h1>
         </div>
       </div>
       <!-- filtern button start -->
-      <div class="row g-4">
+      <div class="row g-4 ">
         <div class="col-lg-4 text-start ">
-          <h2 class="caveat-uniquifier">Krishco <span class="text-primary"> PRODUCT</span></h2>
+          <h1 class="caveat-uniquifier">Krishco <span class="text-primary x_wd_yellow_highlight_03"> Product</span></h1>
         </div>
         <div class="col-lg-8 text-end">
           <ul class="nav nav-pills d-inline-flex text-center mb-5">
             <li class="nav-item">
-              <a class="d-flex m-2 py-2 bg-primary rounded-pill active" data-bs-toggle="pill" href="#tab-1">
-                <span class="text-light" style="width: 130px;" id="all-products">All Products</span>
+              <a class="d-flex m-2 py-2  rounded-pill active custom-link"  href="#call-all-product">
+                <span class="" style="width: 130px;" id="all-products">All Products</span>
               </a>
             </li>
             <li class="nav-item">
-              <a class="d-flex py-2 m-2 bg-primary rounded-pill" data-bs-toggle="pill" href="#tab-2">
-                <span class="text-light" style="width: 130px;" id="pumps">PUMPS</span>
+              <a class="d-flex py-2 m-2  rounded-pill custom-link"  href="#call-pumps">
+                <span class="" style="width: 130px;" id="pumps">Pumps</span>
               </a>
             </li>
             <li class="nav-item">
-              <a class="d-flex m-2 py-2 bg-primary rounded-pill" data-bs-toggle="pill" href="#tab-3">
-                <span class="text-light" style="width: 130px;" id="motor">MOTOR</span>
+              <a class="d-flex m-2 py-2  rounded-pill custom-link"  href="#call-motor">
+                <span class="" style="width: 130px;" id="motor">Motor</span>
               </a>
             </li>
             <li class="nav-item">
-              <a class="d-flex m-2 py-2 bg-primary rounded-pill" data-bs-toggle="pill" href="#tab-4">
-                <span class="text-light" style="width: 150px;" id="pipes-and-fittings">PIPES FITTINGS</span>
+              <a class="d-flex m-2 py-2  rounded-pill custom-link"  href="#call-pipes-fitting">
+                <span class="" style="width: 150px;" id="pipes-and-fittings">Pipes & Fitting</span>
               </a>
             </li>
             <!-- <li class="nav-item">
@@ -223,7 +322,9 @@
         </div>
       </div>
       <!-- filtern button end -->
-      <div class="row g-4 all-products">
+
+      <!-- all product menu start -->
+      <div class="row g-4 all-products" id="call-all-product">
         <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
           <div class="row g-4">
             <div class="col-12">
@@ -337,17 +438,16 @@
       </div>
     </div>
   </div>
-  <!-- our product -->
+  <!-- all product menu end -->
 
 
   <!-- pumps Start -->
-  <div class="container-xxl py-5 product-pump"
-    style="  background-image: linear-gradient(rgb(240, 243, 241),rgb(176, 233, 200)); display: none;">
-    <div class="container">
-      <div class="row g-5 mb-8 align-items-end wow fadeInUp" id="tab-1" data-wow-delay="0.1s">
+  <div class="container-xxl py-5 product-pump" style="  background-image: linear-gradient(rgb(240, 243, 241),rgb(176, 233, 200));" id="call-pumps">
+    <div class="container br p-4">
+      <div class="row g-5 mb-8  align-items-end wow fadeInUp" id="tab-1" data-wow-delay="0.1s">
         <div class="col-lg-12">
           <h1 class="display-5 mb-0" style="text-align: center;">
-            <span class="text-primary caveat-uniquifier">PUMPS</span>
+            <span class="text-primary caveat-uniquifier">Pumps</span>
           </h1>
           <p>KRISHCO Regenerative Self Priming Pumpsets are made from top-grade castings, finest components and high
             quality gun metal using state-of-the-art technology, to conform to the latest International Standards. Each
@@ -406,12 +506,12 @@
 
   <!-- motors Start -->
   <div class="container-xxl py-5 product-motor"
-    style="background-image: linear-gradient(rgb(240, 243, 241),rgb(176, 233, 200)); display: none;">
-    <div class="container">
+    style="background-image: linear-gradient(rgb(240, 243, 241),rgb(176, 233, 200));" id="call-motor">
+    <div class="container p-4">
       <div class="row g-5 mb-5 align-items-end wow fadeInUp" data-wow-delay="0.1s">
         <div class="col-lg-12">
           <h1 class="display-5 mb-0" style="text-align: center;">
-            <span class="text-primary caveat-uniquifier">MOTOR</span>
+            <span class="text-primary caveat-uniquifier">Motor</span>
           </h1>
           <p>The Krischo Motor is an innovative and efficient electric motor designed to deliver high performance while
             maintaining environmental sustainability. Known for its compact design and advanced technology, the Krischo
@@ -476,12 +576,12 @@
 
   <!-- PIPES AND FITTINGS Start -->
   <div class="container-xxl py-5 product-pipes"
-    style="background-image: linear-gradient(rgb(240, 243, 241),rgb(176, 233, 200));display: none;">
-    <div class="container">
+    style="background-image: linear-gradient(rgb(240, 243, 241),rgb(176, 233, 200));" id="call-pipes-fitting">
+    <div class="container p-4">
       <div class="row g-5 mb-5 align-items-end wow fadeInUp" data-wow-delay="0.1s">
         <div class="col-lg-12">
           <h1 class="display-5 mb-0" style="text-align: center;">
-            <span class="text-primary caveat-uniquifier">PIPES AND FITTINGS</span>
+            <span class="text-primary caveat-uniquifier">Pipes & Fittings</span>
           </h1>
           <p>Krischo Pipe and Fitting is a trusted provider of high-quality piping solutions for various industrial
             applications. Specializing in the manufacturing and distribution of pipes and fittings, Krischo ensures
@@ -543,9 +643,34 @@
   <!-- PIPES AND FITTINGS End -->
 
   <!-- our new product start -->
-
-
-
+  <h1 class="caveat-uniquifier" style="text-align: center; margin-top: 2rem;">Our <span class="text-primary">New Product</span></h1>
+  <div class="container-fluid logo-slider">
+    <div class="l-slide">
+      <img src="/krishkoImge/upvc-pipes.jpg" alt="upvc-pipes">
+      <img src="/krishkoImge/colum.png" alt="columm-pipe">
+      <img src="/krishkoImge/JET-PUMPS.jpg" alt="JET-PUMPS">
+      <img src="/krishkoImge/HORIZONTAL-OPENWEL.jpg" alt="HORIZONTAL-OPENWEL">
+      <img src="/krishkoImge/1hp.png" alt="1hp">
+      <img src="/krishkoImge/2HP-Monoblock.jpg" alt="2HP-Monoblock">
+    </div>
+    <div class="l-slide">
+      <img src="/krishkoImge/upvc-pipes.jpg" alt="upvc-pipes">
+      <img src="/krishkoImge/colum.png" alt="columm-pipe">
+      <img src="/krishkoImge/JET-PUMPS.jpg" alt="JET-PUMPS">
+      <img src="/krishkoImge/HORIZONTAL-OPENWEL.jpg" alt="HORIZONTAL-OPENWEL">
+      <img src="/krishkoImge/1hp.png" alt="1hp">
+      <img src="/krishkoImge/2HP-Monoblock.jpg" alt="2HP-Monoblock">
+    </div>
+    <div class="l-slide">
+      <img src="/krishkoImge/upvc-pipes.jpg" alt="upvc-pipes">
+      <img src="/krishkoImge/colum.png" alt="columm-pipe">
+      <img src="/krishkoImge/JET-PUMPS.jpg" alt="JET-PUMPS">
+      <img src="/krishkoImge/HORIZONTAL-OPENWEL.jpg" alt="HORIZONTAL-OPENWEL">
+      <img src="/krishkoImge/1hp.png" alt="1hp">
+      <img src="/krishkoImge/2HP-Monoblock.jpg" alt="2HP-Monoblock">
+    </div>
+  </div>
+  <!-- </div> -->
   <!-- our new product end -->
 
 
@@ -556,7 +681,8 @@
       <div class="row g-5">
         <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.1s">
           <p><span class="text-primary me-2"></span></p>
-          <h1 class="display-5 mb-4 caveat-uniquifier"><span style="color: rgb(81, 80, 80);">Get</span> <span class="text-primary">In
+          <h1 class="display-5 mb-4 caveat-uniquifier"><span style="color: rgb(81, 80, 80);">Get</span> <span
+              class="text-primary">In
               Touch</span></h1>
           <form>
             <div class="row g-3">
@@ -618,7 +744,7 @@
         <div class="col-lg-4 wow fadeInUp " data-wow-delay="0.3s">
           <div class="h-100 bg-light d-flex align-items-center p-5 box-shadow">
             <div class="btn-lg-square bg-white flex-shrink-0">
-              <i class="fa fa-phone-alt text-primary" style="font-size: 30px;"></i>
+              <i class="fa fa-phone text-primary" style="font-size: 30px;"></i>
             </div>
             <div class="ms-4">
               <p class="mb-2">
@@ -695,7 +821,8 @@
       <div class="copyright">
         <div class="row">
           <p style="text-align: center;">Copyright &copy; Krishco Engineers (P) Limited | Developed & Maintained By
-            <span class="text-primary">Rays Edutech Private Limited</span>
+            <span class="text-primary"><a href="https://www.raysonline.in/"><u>Rays Edutech Private
+                  Limited</u></a></span>
           </p>
         </div>
       </div>
@@ -715,15 +842,11 @@
   <script src="lib/counterup/counterup.min.js"></script>
   <script src="lib/owlcarousel/owl.carousel.min.js"></script>
   <script src="lib/lightbox/js/lightbox.min.js"></script>
+  <script src="js/main.js"></script>
 
   <!-- Template Javascript -->
-  <script src="js/main.js"></script>
-  <script>
+  <!-- <script>
     $('#all-products').on('click', function () {
-      // $('').css({ 'color': 'red' })
-      // $('').css({ '': '' })
-      // $('').css({ '': '' })
-      // $('').css({ '': '' })
       $('.all-products').css({ 'display': 'flex' })
       $('.product-pump').css({ 'display': 'none' })
       $('.product-motor').css({ 'display': 'none' })
@@ -747,7 +870,7 @@
       $('.product-motor').css({ 'display': 'none' })
       $('.product-pipes').css({ 'display': 'flex' })
     })
-  </script>
+  </script> -->
 </body>
 
 </html>

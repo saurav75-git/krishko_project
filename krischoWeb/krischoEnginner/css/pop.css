@@ -1,0 +1,28 @@
+
+.vive,.kiwi,.turtle,.tiger,.hp1{
+    background-color: rgba(245, 245, 245, 0.747);
+    position: fixed;
+    display: none;
+    justify-content: center;
+    justify-items: center;
+    width: 100%;
+    height: 100%;
+    z-index: 2;   
+    color: wheat;
+   font-size: 13px;
+}
+
+
+.close{
+    padding-top: 15%; 
+    color: rgb(243, 8, 8); 
+    cursor: pointer; 
+    border-radius: 50%; 
+    width: 100%; 
+    height: 90%; 
+    align-items: center;
+    font-size: 30px;
+}
+.close:hover{
+    color: white;
+}

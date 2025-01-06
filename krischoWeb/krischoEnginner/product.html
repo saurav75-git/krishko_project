@@ -61,7 +61,24 @@
       font-weight: weight;
       font-style: normal;
     }
+     /* Default state */
+ .custom-link {
+        background-color: rgb(220, 220, 220); /* Primary blue */
+        text-decoration: none;
+        transition: background-color 0.3s ease;
+    }
+     /* Hover effect */
+     .custom-link:hover {
+        background-color: #198754; /* Darker blue */
+        color: white;
+    }
+ /* Active state (when pressed) */
+    .custom-link:active {
+        background-color: #198754;
+        color: white;
+    }
   </style>
+  <link rel="stylesheet" href="css/side.css">
 </head>
 
 <body>
@@ -126,6 +143,42 @@
     </div>
   </div>
   <!-- Page Header End -->
+
+    <!-- side pannel start -->
+    <div class="rightFixed-btns" data-aos="zoom-out-left">
+      <ul>
+        <li id="li">
+          <a href="https://wa.me/+919708035424?text=Please%20let%20me%20know%20more%20about%20your%20products%20and%20services!!"
+          target="_blank">
+            <i class="fa-brands fa-whatsapp fa-beat" aria-hidden="true"></i>
+            <div class="rightFixed-btns__content" id="content">
+              <!-- <small>WhatsApp</small><br> -->
+              <span>9708035424</span>
+            </div>
+          </a>
+        </li>
+        <li id="li2" class="content2">
+          <a href="#">
+            <i class="fa-solid fa-headset fa-beat"></i>
+            <div class="rightFixed-btns__content" id="content2">
+              <!-- <small>Enquiry</small><br> -->
+              <span>Enquiry Now</span>
+            </div>
+          </a>
+        </li>
+        <li id="li3">
+          <a href="tel:9708035424">
+            <i class="fa fa-phone fa-beat" aria-hidden="true"></i>
+            <div class="rightFixed-btns__content" id="content3">
+              <!-- <small>Calling No.</small><br> -->
+              <span>9708035424</span>
+            </div>
+          </a>
+        </li>
+      </ul>
+    </div>
+  <!-- side pannel end -->
+
   <!-- optional button start -->
   <!-- <div class="container-xxl br">
   <div class="navbar-nav ms-auto ">
@@ -144,48 +197,48 @@
     <div class="col-lg-0 text-end">
       <ul class="nav nav-pills d-flex text-center mb-6 br" style="justify-content: center;">
         <li class="nav-item">
-          <a class="d-flex m-2 py-2 bg-primary rounded-pill active" data-bs-toggle="pill" href="#tab-1">
-            <span class="text-light" style="width: 130px;" id="residental">Residential</span>
+          <a class="d-flex m-2 py-2 residental-btn rounded-pill active custom-link"  href="#tab-1">
+            <span class="" style="width: 130px;" id="residental">Residential</span>
           </a>
         </li>
         <li class="nav-item">
-          <a class="d-flex py-2 m-2 bg-primary rounded-pill" data-bs-toggle="pill" href="#tab-2">
-            <span class="text-light" style="width: 180px;" id="agricultural-pumps">Agricultural Pumps</span>
+          <a class="d-flex py-2 m-2 agricultural-pumps-btn  rounded-pill custom-link"  href="#tab-2">
+            <span class="" style="width: 180px;" id="agricultural-pumps">Agricultural Pumps</span>
           </a>
         </li>
         <li class="nav-item">
-          <a class="d-flex m-2 py-2 bg-primary rounded-pill" data-bs-toggle="pill" href="#tab-3">
-            <span class="text-light" style="width: 180px;" id="cpvc-pipes">CPVC Pipes & Fittings</span>
+          <a class="d-flex m-2 py-2 cpvc-pipes-btn rounded-pill custom-link" href="#tab-3">
+            <span class="" style="width: 180px;" id="cpvc-pipes">CPVC Pipes & Fittings</span>
           </a>
         </li>
         <li class="nav-item">
-          <a class="d-flex m-2 py-2 bg-primary rounded-pill" data-bs-toggle="pill" href="#tab-4">
-            <span class="text-light" style="width: 180px;" id="upvc-pipes">UPVC Pipes & Fittings</span>
+          <a class="d-flex m-2 py-2 upvc-pipes-btn rounded-pill custom-link" data-bs-toggle="pill" href="#tab-4">
+            <span class="" style="width: 180px;" id="upvc-pipes">UPVC Pipes & Fittings</span>
           </a>
         </li>
         <li class="nav-item">
-          <a class="d-flex m-2 py-2 bg-primary rounded-pill active" data-bs-toggle="pill" href="#tab-1">
-            <span class="text-light" style="width: 180px;" id="swr-pipes">SWR Pipes & Fittings</span>
+          <a class="d-flex m-2 py-2 swr-pipes-btn  rounded-pill custom-link" data-bs-toggle="pill" href="#tab-1">
+            <span class="" style="width: 180px;" id="swr-pipes">SWR Pipes & Fittings</span>
           </a>
         </li>
         <li class="nav-item">
-          <a class="d-flex py-2 m-2 bg-primary rounded-pill" data-bs-toggle="pill" href="#tab-2">
-            <span class="text-light" style="width: 230px;" id="agricultural-pipes">Agricultural Pipes & Fittings</span>
+          <a class="d-flex py-2 m-2  agricultural-pipes-btn rounded-pill custom-link" data-bs-toggle="pill" href="#tab-2">
+            <span class="" style="width: 230px;" id="agricultural-pipes">Agricultural Pipes & Fittings</span>
           </a>
         </li>
         <li class="nav-item">
-          <a class="d-flex m-2 py-2 bg-primary rounded-pill" data-bs-toggle="pill" href="#tab-3">
-            <span class="text-light" style="width: 180px;" id="upvc-casing-pipes">UPVC Casing Pipes</span>
+          <a class="d-flex m-2 py-2 upvc-casing-pipes-btn rounded-pill custom-link" data-bs-toggle="pill" href="#tab-3">
+            <span class="" style="width: 180px;" id="upvc-casing-pipes">UPVC Casing Pipes</span>
           </a>
         </li>
         <li class="nav-item">
-          <a class="d-flex m-2 py-2 bg-primary rounded-pill" data-bs-toggle="pill" href="#tab-4">
-            <span class="text-light" style="width: 130px;" id="column-pipes">Column Pipes</span>
+          <a class="d-flex m-2 py-2 column-pipes-btn rounded-pill custom-link" data-bs-toggle="pill" href="#tab-4">
+            <span class="" style="width: 130px;" id="column-pipes">Column Pipes</span>
           </a>
         </li>
         <li class="nav-item">
-          <a class="d-flex m-2 py-2 bg-primary rounded-pill" data-bs-toggle="pill" href="#tab-4">
-            <span class="text-light" style="width: 130px;" id="water-tank">Water Tanks</span>
+          <a class="d-flex m-2 py-2 water-tank-btn rounded-pill custom-link" data-bs-toggle="pill" href="#tab-4">
+            <span class="" style="width: 130px;" id="water-tank">Water Tanks</span>
           </a>
         </li>
       </ul>
@@ -880,7 +933,7 @@
       <div class="copyright">
         <div class="row">
           <p style="text-align: center;">Copyright &copy; Krishco Engineers (P) Limited | Developed & Maintained By
-            <span class="text-primary">Rays Edutech Private Limited</span>
+            <span class="text-primary"><a href="https://www.raysonline.in/"><u>Rays Edutech Private Limited</u></a></span>
           </p>
         </div>
       </div>
@@ -903,107 +956,7 @@
 
   <!-- Template Javascript -->
   <script src="js/main.js"></script>
-  <script>
-    $('#residental').on('click', function () {
-      $('.residental').css({ 'display': 'flex' })
-      $('.agricultural-pumps').css({ 'display': 'none' })
-      $('.cpvc-pipes').css({ 'display': 'none' })
-      $('.upvc-pipes').css({ 'display': 'none' })
-      $('.swr-pipes').css({ 'display': 'none' })
-      $('.agricultural-pipes').css({ 'display': 'none' })
-      $('.upvc-casing-pipes').css({ 'display': 'none' })
-      $('.column-pipes').css({ 'display': 'none' })
-      $('.water-tank').css({ 'display': 'none' })
-    })
-    $('#agricultural-pumps').on('click', function () {
-      $('.residental').css({ 'display': 'none' })
-      $('.agricultural-pumps').css({ 'display': 'flex' })
-      $('.cpvc-pipes').css({ 'display': 'none' })
-      $('.upvc-pipes').css({ 'display': 'none' })
-      $('.swr-pipes').css({ 'display': 'none' })
-      $('.agricultural-pipes').css({ 'display': 'none' })
-      $('.upvc-casing-pipes').css({ 'display': 'none' })
-      $('.column-pipes').css({ 'display': 'none' })
-      $('.water-tank').css({ 'display': 'none' })
-    })
-    $('#cpvc-pipes').on('click', function () {
-      $('.residental').css({ 'display': 'none' })
-      $('.agricultural-pumps').css({ 'display': 'none' })
-      $('.cpvc-pipes').css({ 'display': 'flex' })
-      $('.upvc-pipes').css({ 'display': 'none' })
-      $('.swr-pipes').css({ 'display': 'none' })
-      $('.agricultural-pipes').css({ 'display': 'none' })
-      $('.upvc-casing-pipes').css({ 'display': 'none' })
-      $('.column-pipes').css({ 'display': 'none' })
-      $('.water-tank').css({ 'display': 'none' })
-    })
-    $('#upvc-pipes').on('click', function () {
-      $('.residental').css({ 'display': 'none' })
-      $('.agricultural-pumps').css({ 'display': 'none' })
-      $('.cpvc-pipes').css({ 'display': 'none' })
-      $('.upvc-pipes').css({ 'display': 'flex' })
-      $('.swr-pipes').css({ 'display': 'none' })
-      $('.agricultural-pipes').css({ 'display': 'none' })
-      $('.upvc-casing-pipes').css({ 'display': 'none' })
-      $('.column-pipes').css({ 'display': 'none' })
-      $('.water-tank').css({ 'display': 'none' })
-    })
-    $('#swr-pipes').on('click', function () {
-      $('.residental').css({ 'display': 'none' })
-      $('.agricultural-pumps').css({ 'display': 'none' })
-      $('.cpvc-pipes').css({ 'display': 'none' })
-      $('.upvc-pipes').css({ 'display': 'none' })
-      $('.swr-pipes').css({ 'display': 'flex' })
-      $('.agricultural-pipes').css({ 'display': 'none' })
-      $('.upvc-casing-pipes').css({ 'display': 'none' })
-      $('.column-pipes').css({ 'display': 'none' })
-      $('.water-tank').css({ 'display': 'none' })
-    })
-    $('#agricultural-pipes').on('click', function () {
-      $('.residental').css({ 'display': 'none' })
-      $('.agricultural-pumps').css({ 'display': 'none' })
-      $('.cpvc-pipes').css({ 'display': 'none' })
-      $('.upvc-pipes').css({ 'display': 'none' })
-      $('.swr-pipes').css({ 'display': 'none' })
-      $('.agricultural-pipes').css({ 'display': 'flex' })
-      $('.upvc-casing-pipes').css({ 'display': 'none' })
-      $('.column-pipes').css({ 'display': 'none' })
-      $('.water-tank').css({ 'display': 'none' })
-    })
-    $('#upvc-casing-pipes').on('click', function () {
-      $('.residental').css({ 'display': 'none' })
-      $('.agricultural-pumps').css({ 'display': 'none' })
-      $('.cpvc-pipes').css({ 'display': 'none' })
-      $('.upvc-pipes').css({ 'display': 'none' })
-      $('.swr-pipes').css({ 'display': 'none' })
-      $('.agricultural-pipes').css({ 'display': 'none' })
-      $('.upvc-casing-pipes').css({ 'display': 'flex' })
-      $('.column-pipes').css({ 'display': 'none' })
-      $('.water-tank').css({ 'display': 'none' })
-    })
-    $('#column-pipes').on('click', function () {
-      $('.residental').css({ 'display': 'none' })
-      $('.agricultural-pumps').css({ 'display': 'none' })
-      $('.cpvc-pipes').css({ 'display': 'none' })
-      $('.upvc-pipes').css({ 'display': 'none' })
-      $('.swr-pipes').css({ 'display': 'none' })
-      $('.agricultural-pipes').css({ 'display': 'none' })
-      $('.upvc-casing-pipes').css({ 'display': 'none' })
-      $('.column-pipes').css({ 'display': 'flex' })
-      $('.water-tank').css({ 'display': 'none' })
-    })
-    $('#water-tank').on('click', function () {
-      $('.residental').css({ 'display': 'none' })
-      $('.agricultural-pumps').css({ 'display': 'none' })
-      $('.cpvc-pipes').css({ 'display': 'none' })
-      $('.upvc-pipes').css({ 'display': 'none' })
-      $('.swr-pipes').css({ 'display': 'none' })
-      $('.agricultural-pipes').css({ 'display': 'none' })
-      $('.upvc-casing-pipes').css({ 'display': 'none' })
-      $('.column-pipes').css({ 'display': 'nones' })
-      $('.water-tank').css({ 'display': 'flex' })
-    })
-  </script>
+  <script src="js/filterbtn.js"></script>
 </body>
 
 </html>

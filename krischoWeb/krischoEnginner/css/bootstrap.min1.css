@@ -8400,7 +8400,10 @@ fieldset:disabled .btn {
 }
 
 .bg-primary {
-    background-color: #81c408 !important
+    background-color: #81c408 
+}
+.bg-primary:hover{
+    background-color: #198754;
 }
 
 .bg-secondary {

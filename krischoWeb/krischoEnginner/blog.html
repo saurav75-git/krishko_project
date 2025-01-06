@@ -35,29 +35,34 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css"
     integrity="sha512-5Hs3dF2AEPkpNAR7UiOHba+lRSJNeM2ECkwxUIxC1Q/FLycGTbNapWXB4tP889k5T5Ju8fs4b1P5z/iB4nMfSQ=="
     crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&display=swap" rel="stylesheet">
   <style>
-    /* *{
+    /* * {
       border: 1px solid red;
+    }
+
+    .br {
+      border: 1.5px solid green;
     } */
-    /* #br{
-      border: 1px solid green;
-    } */
-    .box-shadow{
-    box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.5);
-  }
-    .imgset img{
+
+    .box-shadow {
+      box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.5);
+    }
+
+    .imgset img {
       width: 100%;
       height: 100%;
       object-fit: cover;
     }
-     .caveat-uniquifier{
-    font-family: Caveat;
-  font-optical-sizing: auto;
-  font-weight: weight;
-  font-style: normal;
-}
+
+    .caveat-uniquifier {
+      font-family: Caveat;
+      font-optical-sizing: auto;
+      font-weight: weight;
+      font-style: normal;
+    }
   </style>
+  <link rel="stylesheet" href="css/side.css">
 </head>
 
 <body>
@@ -99,163 +104,229 @@
   <!-- Navbar End -->
 
   <!-- Page Header Start -->
-  <div class="container py-5">
-    <h1 class="display-4 text-dark mb-3 animated slideInDown caveat-uniquifier" style="font-size: 40px; text-align: center;"><span
-        class="text-primary">Blog</span></h1>
+  <div class="container py-5 ">
+    <h1 class="display-4 text-dark mb-3 animated slideInDown caveat-uniquifier"
+      style="font-size: 40px; text-align: center;"><span class="text-primary">Blog</span></h1>
   </div>
   <!-- Page Header End -->
 
+    <!-- side pannel start -->
+    <div class="rightFixed-btns" data-aos="zoom-out-left">
+      <ul>
+        <li id="li">
+          <a href="https://wa.me/+919708035424?text=Please%20let%20me%20know%20more%20about%20your%20products%20and%20services!!"
+          target="_blank">
+            <i class="fa-brands fa-whatsapp fa-beat" aria-hidden="true"></i>
+            <div class="rightFixed-btns__content" id="content">
+              <!-- <small>WhatsApp</small><br> -->
+              <span>9708035424</span>
+            </div>
+          </a>
+        </li>
+        <li id="li2" class="content2">
+          <a href="#">
+            <i class="fa-solid fa-headset fa-beat"></i>
+            <div class="rightFixed-btns__content" id="content2">
+              <!-- <small>Enquiry</small><br> -->
+              <span>Enquiry Now</span>
+            </div>
+          </a>
+        </li>
+        <li id="li3">
+          <a href="tel:9708035424">
+            <i class="fa fa-phone fa-beat" aria-hidden="true"></i>
+            <div class="rightFixed-btns__content" id="content3">
+              <!-- <small>Calling No.</small><br> -->
+              <span>9708035424</span>
+            </div>
+          </a>
+        </li>
+      </ul>
+    </div>
+  <!-- side pannel end -->
+
   <!-- Facts Start -->
-  <div class=" bg-white  my-5  wow fadeInUp" data-wow-delay="0.1s">
-    <div class="container  d-flex " id="br">
-        <div class="col-md-12 col-lg-2 text-center imgset wow fadeIn"  data-wow-delay="0.1s" id="br">
-          <img src="/krishkoImge/SWR-Pipe1.jpeg" alt="" >
+  <div class="container br d-flex">
+    <div class="container col-lg-9 br">
+      <div class=" bg-white  my-5   wow fadeInUp br" data-wow-delay="0.1s">
+        <div class="container  d-flex  " id="br">
+          <div class="col-md-12 col-lg-3 text-center imgset wow fadeIn" data-wow-delay="0.1s" id="br">
+            <img src="/krishkoImge/SWR-Pipe1.jpeg" alt="">
+          </div>
+          <div class="mx-auto p-4">
+            <h1 class="text-primary mb-2 caveat-uniquifier" style="font-size: 20px;">SWR Pipes and Fittings</h1>
+            <p class="text-dark mb-0" style="text-align: left;">A Complete Guide - Soil, Waste and Stormwater (SWR)
+              systems are an essential part of construction today,....</p><br>
+            <button type="button" class="btn btn-outline-success" style="text-align: center;">Read More..</button>
+          </div>
         </div>
-        <div class="mx-auto"><h1 class="text-primary mb-2 caveat-uniquifier" style="font-size: 20px;">SWR Pipes and Fittings</h1>
-          <p class="text-dark mb-0" style="text-align: center;">A Complete Guide - Soil, Waste and Stormwater (SWR) systems are an essential part of construction today,....</p><br>
-          <button type="button" class="btn btn-outline-success" style="text-align: center;">Read More..</button>
+      </div>
+      <div class=" bg-white  my-3  wow fadeInUp" data-wow-delay="0.1s">
+        <div class="container  d-flex " id="br">
+          <div class="col-md-6 col-lg-3 text-center imgset wow fadeIn" data-wow-delay="0.1s" id="br">
+            <img src="/krishkoImge/agri-and-fitting.jpg" alt="">
+          </div>
+          <div class="mx-auto p-4">
+            <h1 class="text-primary mb-2 caveat-uniquifier" style="font-size: 20px;">Agri-Pipes and Fittings</h1>
+            <p class="text-dark mb-0" style="text-align: left;">In a dynamic agricultural world where resource use is
+              important, agricultural pipes and fittings play...</p><br>
+            <button type="button" class="btn btn-outline-success" style="text-align: center;">Read More..</button>
+          </div>
+        </div>
+      </div>
+      <div class=" bg-white  my-5  wow fadeInUp" data-wow-delay="0.1s">
+        <div class="container  d-flex " id="br">
+          <div class="col-md-6 col-lg-3 text-center imgset wow fadeIn" data-wow-delay="0.1s" id="br">
+            <img src="/krishkoImge/cpvc-pipe.jpeg" alt="">
+          </div>
+          <div class="mx-auto p-4">
+            <h1 class="text-primary mb-2 caveat-uniquifier" style="font-size: 20px;">
+              CPVC Pipes and Fittings</h1>
+            <p class="text-dark mb-0" style="text-align: left;">Chlorinated Polyvinyl Chloride, or CPVC, has emerged
+              as a leading material in the plumbing industry,....</p><br>
+            <button type="button" class="btn btn-outline-success" style="text-align: center;">Read More..</button>
+          </div>
+        </div>
+      </div>
+      <div class=" bg-white  my-5  wow fadeInUp" data-wow-delay="0.1s">
+        <div class="container  d-flex " id="br">
+          <div class="col-md-6 col-lg-3 text-center imgset wow fadeIn" data-wow-delay="0.1s" id="br">
+            <img src="/krishkoImge/upvc-pipes.jpg" alt="">
+          </div>
+          <div class="mx-auto p-4">
+            <h1 class="text-primary mb-2 caveat-uniquifier" style="font-size: 20px;">UPVC Pipes and Fittings</h1>
+            <p class="text-dark mb-0" style="text-align: left;">Unplasticized polyvinyl chloride, commonly known as
+              UPVC, has become a popular choice for ....</p><br>
+            <button type="button" class="btn btn-outline-success" style="text-align: center;">Read More..</button>
+          </div>
         </div>
       </div>
     </div>
-  </div>
-  <div class=" bg-white  my-3  wow fadeInUp" data-wow-delay="0.1s">
-    <div class="container  d-flex " id="br">
-        <div class="col-md-6 col-lg-2 text-center imgset wow fadeIn"  data-wow-delay="0.1s" id="br">
-          <img src="/krishkoImge/agri-and-fitting.jpg" alt="" >
+    <div class="container">
+      <div class="container py-5 br">
+        <h1 class="display-4 text-dark mb-3 animated slideInDown caveat-uniquifier"
+          style="font-size: 40px; text-align: center;">product <span class="text-primary">post</span></h1>
+      <div class="">
+        <div class="col-md-3 col-lg-10 py-lg-0  text-center imgset wow fadeIn " data-wow-delay="0.1s" id="br">
+          <img src="/krishkoImge/cpvc-pipe.jpeg" alt="">
+          <span class="text-primary">CPVC Pipes and Fittings</span>
         </div>
-        <div class="mx-auto"><h1 class="text-primary mb-2 caveat-uniquifier" style="font-size: 20px;">Agri-Pipes and Fittings</h1>
-          <p class="text-dark mb-0" style="text-align: center;">In a dynamic agricultural world where resource use is important, agricultural pipes and fittings play...</p><br>
-          <button type="button" class="btn btn-outline-success" style="text-align: center;">Read More..</button>
+        <div class="col-md-3 col-lg-10 py-lg-0 text-center imgset wow fadeIn" data-wow-delay="0.1s" id="br">
+          <img src="/krishkoImge/upvc-pipes.jpg" alt="">
+          <span class="text-primary">UPVC Pipes and Fittings</span>
         </div>
-      </div>
-    </div>
-  </div>
-  <div class=" bg-white  my-5  wow fadeInUp" data-wow-delay="0.1s">
-    <div class="container  d-flex " id="br">
-        <div class="col-md-6 col-lg-2 text-center imgset wow fadeIn"  data-wow-delay="0.1s" id="br">
-          <img src="/krishkoImge/cpvc-pipe.jpeg" alt="" >
-        </div>
-        <div class="mx-auto"><h1 class="text-primary mb-2 caveat-uniquifier" style="font-size: 20px;">
-          CPVC Pipes and Fittings</h1>
-          <p class="text-dark mb-0" style="text-align: center;">Chlorinated Polyvinyl Chloride, or CPVC, has emerged as a leading material in the plumbing industry,....</p><br>
-          <button type="button" class="btn btn-outline-success" style="text-align: center;">Read More..</button>
+        <div class="col-md-3 col-lg-10 py-lg-0 text-center imgset wow fadeIn" data-wow-delay="0.1s" id="br">
+          <img src="/krishkoImge/cpvc-pipe.jpeg" alt="">
+          <span class="text-primary">CPVC Pipes and Fittings</span>
         </div>
       </div>
-    </div>
-  </div>
-  <div class=" bg-white  my-5  wow fadeInUp" data-wow-delay="0.1s">
-    <div class="container  d-flex " id="br">
-        <div class="col-md-6 col-lg-2 text-center imgset wow fadeIn"  data-wow-delay="0.1s" id="br">
-          <img src="/krishkoImge/upvc-pipes.jpg" alt="" >
-        </div>
-        <div class="mx-auto"><h1 class="text-primary mb-2 caveat-uniquifier" style="font-size: 20px;">UPVC Pipes and Fittings</h1>
-          <p class="text-dark mb-0" style="text-align: center;">Unplasticized polyvinyl chloride, commonly known as UPVC, has become a popular choice for ....</p><br>
-          <button type="button" class="btn btn-outline-success" style="text-align: center;">Read More..</button>
-        </div>
       </div>
+      
     </div>
   </div>
   <!-- Facts End -->
 
-<!-- Footer Start -->
-<div class="container-xxl py-5" style="width: 90%;">
-  <div class="row g-4 mb-2 mt-3">
+  <!-- Footer Start -->
+  <div class="container-xxl py-5" style="width: 90%;">
+    <div class="row g-4 mb-2 mt-3">
       <div class="col-lg-4 wow fadeInUp" data-wow-delay="0.1s">
-          <div class="h-100 bg-light d-flex align-items-center p-5 box-shadow">
-              <div class="btn-lg-square bg-white flex-shrink-0">
-                  <i class="fa-brands fa-square-whatsapp text-primary" style="font-size: 30px;"></i>
-              </div>
-              <div class="ms-4">
-                  <p class="mb-2">
-                      <span class="text-primary me-2">#</span>WhatApp Now
-                  </p>
-                  <h5 class="mb-0">+91 776690319</h5>
-              </div>
+        <div class="h-100 bg-light d-flex align-items-center p-5 box-shadow">
+          <div class="btn-lg-square bg-white flex-shrink-0">
+            <i class="fa-brands fa-square-whatsapp text-primary" style="font-size: 30px;"></i>
           </div>
+          <div class="ms-4">
+            <p class="mb-2">
+              <span class="text-primary me-2">#</span>WhatApp Now
+            </p>
+            <h5 class="mb-0">+91 776690319</h5>
+          </div>
+        </div>
       </div>
       <div class="col-lg-4 wow fadeInUp" data-wow-delay="0.3s">
-          <div class="h-100 bg-light d-flex align-items-center p-5 box-shadow">
-              <div class="btn-lg-square bg-white flex-shrink-0">
-                  <i class="fa fa-phone-alt text-primary" style="font-size: 30px;"></i>
-              </div>
-              <div class="ms-4">
-                  <p class="mb-2">
-                      <span class="text-primary me-2">#</span>Call Now
-                  </p>
-                  <h5 class="mb-0"> +91 7766909319</h5>
-              </div>
+        <div class="h-100 bg-light d-flex align-items-center p-5 box-shadow">
+          <div class="btn-lg-square bg-white flex-shrink-0">
+            <i class="fa fa-phone-alt text-primary" style="font-size: 30px;"></i>
           </div>
+          <div class="ms-4">
+            <p class="mb-2">
+              <span class="text-primary me-2">#</span>Call Now
+            </p>
+            <h5 class="mb-0"> +91 7766909319</h5>
+          </div>
+        </div>
       </div>
       <div class="col-lg-4 wow fadeInUp" data-wow-delay="0.5s">
-          <div class="h-100 bg-light d-flex align-items-center p-5 box-shadow">
-              <div class="btn-lg-square bg-white flex-shrink-0">
-                  <i class="fa fa-envelope-open text-primary" style="font-size: 30px;"></i>
-              </div>
-              <div class="ms-4">
-                  <p class="mb-2">
-                      <span class="text-primary me-2">#</span>Mail Now
-                  </p>
-                  <h5 class="mb-0">info@krishcogroup.com</h5>
-              </div>
+        <div class="h-100 bg-light d-flex align-items-center p-5 box-shadow">
+          <div class="btn-lg-square bg-white flex-shrink-0">
+            <i class="fa fa-envelope-open text-primary" style="font-size: 30px;"></i>
           </div>
-      </div>
-  </div>
-</div>
-</div>
-</div>
-<div class="container-fluid footer bg-dark text-light footer mt-5 pt-5 wow fadeIn" data-wow-delay="0.1s">
-  <div class="container py-5">
-    <div class="row g-6" style="margin-left: 50px;" >
-      <div class="col-lg-6 col-md-6" id="br">
-        <h5 class="text-light mb-4">Address</h5>
-          <p class="mb-2" style="display: flex;" >
-          <i class="fa fa-map-marker-alt me-3"></i><span>Krishco Engineers (P) Limited, Avinashi Road, Peelamedu, Coimbatore</span>
-        </p>
-        <p class="mb-2">
-          <i class="fa fa-map-marker-alt me-3"></i>Krishco Tower, Via Transport Nagar Gate No. 1,Patna-800026
-        </p>
-        <p class="mb-2">
-          <i class="fa fa-phone-alt me-3"></i> +91 7766909319
-        </p>
-        <p class="mb-2">
-          <i class="fa fa-envelope me-3"></i>info@krishcogroup.com
-        </p>
-        
-      </div>
-      <div class="col-lg-3 col-md-6" id="br">
-        <h5 class="text-light mb-4">Quick Links</h5>
-        <a class="btn btn-link" href="about.html">About Us</a>
-        <a class="btn btn-link" href="contact.html">Contact Us</a>
-        <a class="btn btn-link" href="product.html">Product</a>
-        <a class="btn btn-link" href="blog.html">Blog</a>
-        <a class="btn btn-link" href="gallery.html">Gallary</a>
-      </div>
-      <div class="col-lg-3 col-md-6"  id="br">
-        <div class="position-relative mx-auto" style="max-width: 400px;top: 30px;">
-          <input class="form-control border-0 w-100 py-3 ps-4 pe-5" type="text" placeholder="Your email" />
-          <button type="button" class="btn btn-primary py-2 position-absolute top-0 end-0 mt-2 me-2">
-            SignUp
-          </button>
-        </div>
-        <div class="d-flex mt-2" style="position: relative;top:50px;">
-          <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-twitter"></i></a><br>
-          <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-facebook-f"></i></a>
-          <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-youtube"></i></a>
-          <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-linkedin-in"></i></a>
+          <div class="ms-4">
+            <p class="mb-2">
+              <span class="text-primary me-2">#</span>Mail Now
+            </p>
+            <h5 class="mb-0">info@krishcogroup.com</h5>
+          </div>
         </div>
       </div>
     </div>
   </div>
-  <div class="container">
-    <div class="copyright">
-      <div class="row">
-        <p style="text-align: center;">Copyright &copy; Krishco Engineers (P) Limited | Developed & Maintained By
-          <span class="text-primary">Rays Edutech Private Limited</span></p>
+  </div>
+  </div>
+  <div class="container-fluid footer bg-dark text-light footer mt-5 pt-5 wow fadeIn" data-wow-delay="0.1s">
+    <div class="container py-5">
+      <div class="row g-6" style="margin-left: 50px;">
+        <div class="col-lg-6 col-md-6" id="br">
+          <h5 class="text-light mb-4">Address</h5>
+          <p class="mb-2" style="display: flex;">
+            <i class="fa fa-map-marker-alt me-3"></i><span>Krishco Engineers (P) Limited, Avinashi Road, Peelamedu,
+              Coimbatore</span>
+          </p>
+          <p class="mb-2">
+            <i class="fa fa-map-marker-alt me-3"></i>Krishco Tower, Via Transport Nagar Gate No. 1,Patna-800026
+          </p>
+          <p class="mb-2">
+            <i class="fa fa-phone-alt me-3"></i> +91 7766909319
+          </p>
+          <p class="mb-2">
+            <i class="fa fa-envelope me-3"></i>info@krishcogroup.com
+          </p>
+
+        </div>
+        <div class="col-lg-3 col-md-6" id="br">
+          <h5 class="text-light mb-4">Quick Links</h5>
+          <a class="btn btn-link" href="about.html">About Us</a>
+          <a class="btn btn-link" href="contact.html">Contact Us</a>
+          <a class="btn btn-link" href="product.html">Product</a>
+          <a class="btn btn-link" href="blog.html">Blog</a>
+          <a class="btn btn-link" href="gallery.html">Gallary</a>
+        </div>
+        <div class="col-lg-3 col-md-6" id="br">
+          <div class="position-relative mx-auto" style="max-width: 400px;top: 30px;">
+            <input class="form-control border-0 w-100 py-3 ps-4 pe-5" type="text" placeholder="Your email" />
+            <button type="button" class="btn btn-primary py-2 position-absolute top-0 end-0 mt-2 me-2">
+              SignUp
+            </button>
+          </div>
+          <div class="d-flex mt-2" style="position: relative;top:50px;">
+            <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-twitter"></i></a><br>
+            <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-facebook-f"></i></a>
+            <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-youtube"></i></a>
+            <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-linkedin-in"></i></a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="container">
+      <div class="copyright">
+        <div class="row">
+          <p style="text-align: center;">Copyright &copy; Krishco Engineers (P) Limited | Developed & Maintained By
+            <span class="text-primary"><a href="https://www.raysonline.in/"><u>Rays Edutech Private Limited</u></a></span>
+          </p>
+        </div>
       </div>
     </div>
   </div>
-</div>
-<!-- Footer End -->
+  <!-- Footer End -->
 
   <!-- Back to Top -->
   <a href="#" class="btn btn-lg btn-primary btn-lg-square back-to-top"><i class="bi bi-arrow-up"></i></a>
